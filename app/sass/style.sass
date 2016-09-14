@@ -1,0 +1,86 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,700|Roboto+Condensed:300"
+
+$color-theme:       #c792ea
+$color-theme-light: lighten(#c792ea, 20%)
+$color-heading:     $color-theme
+$color-content:     desaturate($color-theme, 50%)
+$color-background:  white
+$size-heading:      2rem
+$size-content:      1.25rem
+
+body
+    margin: 0
+    font-family: Roboto, sans-serif
+    font-size: 0
+    color: $color-content
+    .wrapper
+        width: 100vw
+        height: 100vh
+        background: linear-gradient($color-background, $color-theme-light)
+        h1, h2
+            display: block
+            margin: 0
+            line-height: 1
+        h1
+            color: $color-heading
+            font-family: "Roboto Condensed", sans-serif
+            font-weight: 100
+            font-size: $size-heading
+            letter-spacing: 0.1rem
+        p
+            margin: 1rem 0
+            font-weight: 300
+            font-size: $size-content
+        .table
+            display: table
+        .cell
+            display: table-cell
+            vertical-align: middle
+        .modal
+            height: auto
+            position: relative
+            top: 50%
+            transform: translateY(-50%)
+            margin: auto
+            & > div
+                display: table-cell
+            .cell
+                &.avatar, & > .avatar
+                    width: calc(128px * 0.625)
+                & > .avatar
+                    overflow: hidden
+                    img
+                        border-radius: 50%
+                &.content
+                    border-left: calc( 3rem / 16 ) solid $color-theme
+                & > .content
+                    margin: 0 24px
+                    display: inline-block
+                    ul.icons
+                        margin: 0
+                        padding: 0
+                        li.icon
+                            margin-right: 16px
+                            list-style: none
+                            width: 32px
+                            height: 32px
+                            position: relative
+                            display: inline-block
+                            a
+                                display: block
+                                width: inherit
+                                height: inherit
+                                border-radius: 50%
+                                svg
+                                    width: inherit
+                                    height: inherit
+                                    stroke: $color-content
+                                    fill: $color-content
+                                    transition: 0.25s
+                                    &:hover
+                                        cursor: pointer
+                                        stroke: $color-theme
+                                        fill: $color-theme
+                                        transform: scale(1.25)
+                                    &:active
+                                        transform: scale(0.9)

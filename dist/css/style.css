@@ -1,0 +1,81 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,700|Roboto+Condensed:300";
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  font-size: 0;
+  color: #c0b3ca; }
+  body .wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: -webkit-linear-gradient(white, #f3e8fa);
+    background: linear-gradient(white, #f3e8fa); }
+    body .wrapper h1, body .wrapper h2 {
+      display: block;
+      margin: 0;
+      line-height: 1; }
+    body .wrapper h1 {
+      color: #c792ea;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 100;
+      font-size: 2rem;
+      letter-spacing: 0.1rem; }
+    body .wrapper p {
+      margin: 1rem 0;
+      font-weight: 300;
+      font-size: 1.25rem; }
+    body .wrapper .table {
+      display: table; }
+    body .wrapper .cell {
+      display: table-cell;
+      vertical-align: middle; }
+    body .wrapper .modal {
+      height: auto;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      margin: auto; }
+      body .wrapper .modal > div {
+        display: table-cell; }
+      body .wrapper .modal .cell.avatar, body .wrapper .modal .cell > .avatar {
+        width: calc(128px * 0.625); }
+      body .wrapper .modal .cell > .avatar {
+        overflow: hidden; }
+        body .wrapper .modal .cell > .avatar img {
+          border-radius: 50%; }
+      body .wrapper .modal .cell.content {
+        border-left: calc( 3rem / 16) solid #c792ea; }
+      body .wrapper .modal .cell > .content {
+        margin: 0 24px;
+        display: inline-block; }
+        body .wrapper .modal .cell > .content ul.icons {
+          margin: 0;
+          padding: 0; }
+          body .wrapper .modal .cell > .content ul.icons li.icon {
+            margin-right: 16px;
+            list-style: none;
+            width: 32px;
+            height: 32px;
+            position: relative;
+            display: inline-block; }
+            body .wrapper .modal .cell > .content ul.icons li.icon a {
+              display: block;
+              width: inherit;
+              height: inherit;
+              border-radius: 50%; }
+              body .wrapper .modal .cell > .content ul.icons li.icon a svg {
+                width: inherit;
+                height: inherit;
+                stroke: #c0b3ca;
+                fill: #c0b3ca;
+                -webkit-transition: 0.25s;
+                transition: 0.25s; }
+                body .wrapper .modal .cell > .content ul.icons li.icon a svg:hover {
+                  cursor: pointer;
+                  stroke: #c792ea;
+                  fill: #c792ea;
+                  -webkit-transform: scale(1.25);
+                          transform: scale(1.25); }
+                body .wrapper .modal .cell > .content ul.icons li.icon a svg:active {
+                  -webkit-transform: scale(0.9);
+                          transform: scale(0.9); }
