@@ -19,7 +19,8 @@ body {
       font-weight: 100;
       font-size: 2rem;
       letter-spacing: 0.1rem; }
-    body .wrapper p {
+    body .wrapper span {
+      display: block;
       margin: 1rem 0;
       font-weight: 300;
       font-size: 1.25rem; }
@@ -46,7 +47,7 @@ body {
       body .wrapper .modal .cell.content {
         border-left: calc( 3rem / 16) solid #c792ea; }
       body .wrapper .modal .cell > .content {
-        margin: 0 24px;
+        margin: 0 32px;
         display: inline-block; }
         body .wrapper .modal .cell > .content ul.icons {
           margin: 0;
