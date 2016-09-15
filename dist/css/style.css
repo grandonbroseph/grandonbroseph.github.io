@@ -18,20 +18,22 @@ body {
     font-size: 2rem;
     margin-bottom: 0.75rem;
     letter-spacing: 0.05rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    line-height: 24px; }
   body h2 {
     font-weight: 300;
     margin-bottom: 0.5rem;
     font-size: 1.5rem; }
   body h3 {
     font-weight: 300;
-    margin-bottom: 0.75rem;
+    margin: 0.75rem 0;
     font-size: 1.25rem; }
   body p, body span {
     font-weight: 300;
-    line-height: 1.5;
     margin: 0;
     font-size: 1rem; }
+  body p {
+    line-height: 2; }
   body span {
     line-height: 1; }
   body a {
@@ -99,14 +101,15 @@ body {
                   -webkit-transform: scale(1) translateY(1px);
                           transform: scale(1) translateY(1px); }
     body > .content .banner {
-      margin-top: 2rem;
-      background: rgba(255, 255, 255, 0.5); }
+      margin-top: 2rem; }
+      body > .content .banner h1 {
+        margin: 0 calc(10% + 1rem); }
       body > .content .banner .content {
-        padding: 32px 64px;
+        background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0));
+        background: linear-gradient(white, rgba(255, 255, 255, 0));
+        padding: 16px 10%;
         position: relative;
-        margin: 0 auto;
-        width: 80%;
-        max-width: 960px; }
+        margin: 0 auto; }
         body > .content .banner .content ul.repos li.repo {
           text-align: left;
           vertical-align: top;
@@ -114,19 +117,15 @@ body {
           display: block;
           max-width: 480px;
           padding: 0 24px;
-          border-left: 0.15rem solid #c0b3ca; }
+          border-left: 0.15rem solid #c792ea; }
           body > .content .banner .content ul.repos li.repo a {
             display: block; }
             body > .content .banner .content ul.repos li.repo a .heading {
               margin-bottom: 0.5rem; }
             body > .content .banner .content ul.repos li.repo a h2 {
               display: block;
-              color: #c0b3ca;
+              color: #c792ea;
               margin-bottom: 0.5rem; }
-            body > .content .banner .content ul.repos li.repo a:hover {
-              border-color: #c792ea; }
-              body > .content .banner .content ul.repos li.repo a:hover h2 {
-                color: #c792ea; }
           body > .content .banner .content ul.repos li.repo ul.icons {
             margin-top: 0.5rem; }
             body > .content .banner .content ul.repos li.repo ul.icons li.icon {

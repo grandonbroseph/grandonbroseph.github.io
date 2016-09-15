@@ -13,15 +13,10 @@ function getJSON(url, callback) {
     head.appendChild(script);
 }
 
-getJSON("https://api.github.com/users/GrandonBroseph", function (data){
-    var status = document.querySelector("span.status"), description = document.querySelector(".description");
-    status.innerText = data.public_repos+" projects on GitHub";
-    description.innerText = data.bio;
-    console.log(data);
-});
-
 getJSON("https://api.github.com/users/GrandonBroseph/repos", function (repos){
-    var list = document.querySelector("ul.repos"), child;
+    var list = document.querySelector("ul.repos"), status = document.querySelector("h3.status");
+
+    status.innerText = repos.length+" projects on GitHub";
     for (var i = 0, repo, item, icons, type; repo = repos[i++];) {
         console.log(i, repo.name, repo);
         item = document.createElement("li");

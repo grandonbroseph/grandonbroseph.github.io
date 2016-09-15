@@ -30,19 +30,21 @@ body
         margin-bottom: 0.75rem
         letter-spacing: 0.05rem
         text-transform: uppercase
+        line-height: 24px // Magic number, but it works
     h2
         font-weight: 300
         margin-bottom: 0.5rem
         font-size: $size-heading
     h3
         font-weight: 300
-        margin-bottom: 0.75rem
+        margin: 0.75rem 0
         font-size: $size-heading-small
     p, span
         font-weight: 300
-        line-height: 1.5
         margin: 0
         font-size: $size-content
+    p
+        line-height: 2
     span
         line-height: 1
     a
@@ -110,13 +112,13 @@ body
                                         transform: scale(1) translateY(1px)
         .banner
             margin-top: 2rem
-            background: rgba(255, 255, 255, 0.5)
+            h1
+                margin: 0 calc(10% + 1rem)
             .content
-                padding: 32px 64px
+                background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
+                padding: 16px 10%
                 position: relative
                 margin: 0 auto
-                width: 80%
-                max-width: 960px
                 span.status
                 ul.repos
                     li.repo
@@ -126,19 +128,15 @@ body
                         display: block
                         max-width: 480px
                         padding: 0 24px
-                        border-left: 0.15rem solid $color-content
+                        border-left: 0.15rem solid $color-theme
                         a
                             display: block
                             .heading
                                 margin-bottom: 0.5rem
                             h2
                                 display: block
-                                color: $color-content
+                                color: $color-theme
                                 margin-bottom: 0.5rem
-                            &:hover
-                                border-color: $color-theme
-                                h2
-                                    color: $color-theme
                         ul.icons
                             margin-top: 0.5rem
                             li.icon
