@@ -4,7 +4,7 @@
   "description": "A basic website for Grandon Broseph.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GrandonBroseph/grandonbroseph.github.io"
+    "url": "https://github.com/GrandonBroseph/grandonbroseph.github.io.git"
   },
   "author": "grandonbroseph (Brandon Semilla)",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-jade": "^1.1.0",
+    "gulp-pug": "^3.0.4",
     "gulp-sass": "^2.3.2"
   }
 }

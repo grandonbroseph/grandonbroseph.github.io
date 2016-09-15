@@ -1,0 +1,44 @@
+doctype
+html(lang="en-us")
+    head
+        title Brandon Semilla
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" type="text/css" href="./dist/css/style.css")
+        script(src="./dist/js/github.js")
+    body
+        ul.svg-list
+            li
+                include ../../dist/img/svg/github-watch.svg
+            li
+                include ../../dist/img/svg/github-star.svg
+            li
+                include ../../dist/img/svg/github-fork.svg
+        .content
+            .box.table
+                .avatar.cell
+                    .avatar
+                .content.cell
+                    .content
+                        h1 BRANDON SEMILLA
+                        h3.description
+                        p Not for honor,
+                        p but for food~
+                        p I'm stiiiill in a meeeeme--&#9834;
+                        p #[strong SNAAAAKEE EAAATEEERRR~]
+                        ul.icons
+                            li.icon.twitter
+                                a(href="https://twitter.com/GrandonBroseph" target="_blank" title="Twitter (Brandon Semilla)" alt="Twitter icon")
+                                    include ../../dist/img/svg/twitter.svg
+                            li.icon.github
+                                a(href="https://github.com/GrandonBroseph/" target="_blank" title="GitHub (Brandon Semilla)" alt="GitHub icon")
+                                    include ../../dist/img/svg/github.svg
+                            li.icon.codepen
+                                a(href="http://codepen.io/GrandonBroseph/" target="_blank" title="CodePen (Brandon Semilla)" alt="CodePen icon")
+                                    include ../../dist/img/svg/codepen.svg
+            .banner
+                .content
+                    h1 GitHub projects
+                    span.status Loading Git repositories...
+                    ul.repos
+        footer
+            span &copy;2016 GrandonBroseph.
