@@ -1,107 +1,99 @@
-var gulp         = require("gulp"),
-    pug          = require("gulp-pug"),
-    sass         = require("gulp-sass"),
-    autoprefixer = require("gulp-autoprefixer"),
-    imagemin     = require("gulp-imagemin"),
-    cache        = require("gulp-cache"),
-    del          = require("del"),
-    runSequence  = require("run-sequence"),
-    browserSync  = require("browser-sync").create(),
-    autoClose    = require("browser-sync-close-hook"),
-    argv         = require("yargs").argv,
-    langs        = ["pug", "sass", "js"];
+const gulp         = require("gulp");
+const pug          = require("gulp-pug");
+const sass         = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
+const imagemin     = require("gulp-imagemin");
+const cache        = require("gulp-cache");
+const browserify   = require("gulp-browserify");
+const connect      = require("gulp-connect");
+const runSequence  = require("run-sequence");
+const ngrok        = require("ngrok");
+const del          = require("del");
+const exec         = require("child_process").exec;
+const config = {
+          root:   ".",
+          start:  "src",
+          finish: "dist",
+          static: true,
+          port:   8080
+      },
+      start  = config.root + "/" + config.start,
+      finish = config.root + "/" + config.finish;
 
-config = {
-    port: 8080,
-    root: "./"
-};
-
-function error(error) {
-    console.log(error.toString());
-    this.emit("end");
-}
-
-gulp.task("pug", function() {
-    console.log("Processing pug file(s)...");
-    return gulp.src(config.root+"app/pug/index.pug")
-               .pipe(pug())
-               .on("error", error)
-               .pipe(gulp.dest(config.root))
-               .pipe(browserSync.stream());
+gulp.task("pages", function() {
+  return gulp.src(start+"/pages/index.pug")
+             .pipe(pug())
+             .pipe(gulp.dest(finish))
+             .pipe(connect.reload());
 });
 
-gulp.task("sass", function() {
-    console.log("Processing sass file(s)...");
-    return gulp.src(config.root+"app/sass/*.sass")
-               .pipe(sass())
-               .on("error", error)
-               .pipe(autoprefixer())
-               .on("error", error)
-               .pipe(gulp.dest(config.root+"dist/css"))
-               .pipe(browserSync.stream());
+gulp.task("styles", function() {
+  return gulp.src(start+"/styles/index.+(scss|sass)")
+             .pipe(sass()).on("error", sass.logError)
+             .pipe(autoprefixer())
+             .pipe(gulp.dest(finish+"/styles"))
+             .pipe(connect.reload());
 });
 
-gulp.task("js", function() {
-    console.log("Processing js file(s)...");
-    return gulp.src(config.root+"app/js/*.js")
-               .pipe(gulp.dest(config.root+"dist/js"))
-               .pipe(browserSync.stream());
+gulp.task("scripts", function() {
+  return gulp.src(start+"/scripts/index.js")
+             .pipe(browserify())
+             .pipe(gulp.dest(finish+"/scripts"))
+             .pipe(connect.reload());
 });
 
-gulp.task("img", function(){
-    console.log("Processing image(s)...");
-    return gulp.src(config.root+"app/img/**/*.+(png|jpg|gif|svg)")
+gulp.task("images", function(){
+    return gulp.src(start+"/images/**/*.+(png|jpg|gif|svg)")
                .pipe(cache(imagemin()))
-               .on("error", error)
-               .pipe(gulp.dest(config.root+"dist/img/"));
+               .pipe(gulp.dest(finish+"/images/"))
+               .pipe(connect.reload());
 });
 
-gulp.task("clean", function(callback){
-    config.port = (argv.p || argv.port) || config.port;
-    config.root = (argv.r || argv.root) || config.root;
-    console.log("Deleting folder '"+config.root+"dist/"+"'...")
-    return del(config.root+"dist/**/*.*");
+gulp.task("flash", function(){
+    return gulp.src(start+"/flash/**/*.swf")
+               .pipe(gulp.dest(finish+"/flash/"));
 });
 
-gulp.task("build", ["clean"], function(callback) {
-    console.log("Preprocessing...");
-    runSequence("img", langs, callback);
+gulp.task("clean", function() {
+  return del(finish+"/**/*", {force: true});
 });
 
-gulp.task("watch", function(){
-    config.root = (argv.r || argv.root) || config.root;
-    console.log("Watching scripts in directory '"+config.root+"'...");
-    for (var i = 0, lang; lang = langs[i ++];) {
-        console.log(lang);
-        gulp.watch(config.root+"app/"+lang+"/**/*."+lang, [lang]);
-    }
-    gulp.watch(config.root+"app/img/**/*.+(png|jpg|gif|svg)", ["img"]);
+gulp.task("build", ["clean"], function() {
+  runSequence("flash", "images", "styles", "scripts", "pages");
 });
 
-gulp.task("server", function(){
-    config.port = (argv.p || argv.port) || config.port;
-    browserSync.use({
-        plugin() {},
-        hooks: {
-            "client:js": autoClose
-        }
+gulp.task("watch", ["build"], function() {
+  gulp.watch(start+"/pages/**/*.+(jade|pug)", ["pages"]);
+  gulp.watch(start+"/styles/**/*.+(scss|sass)", ["styles"]);
+  gulp.watch(start+"/scripts/**/*.js", ["scripts"]);
+  gulp.watch(start+"/images/**/*.*", ["images"]);
+  gulp.watch(start+"/flash/**/*.*", ["flash"]);
+});
+
+gulp.task("server", function() {
+  if (!config.static) {
+    exec("node server", function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
     });
-    browserSync.init({
-        server: {
-            baseDir: config.root
-        },
-        notify: false,
-        open: false,
-        logConnections: true,
-        port: config.port
-    }, function() {
-        console.log("Server started at localhost:"+config.port);
+  } else {
+    connect.server({
+      root: finish,
+      port: config.port
     });
+  }
 });
 
-gulp.task("default", function(){
-    config.port = (argv.p || argv.port) || config.port;
-    config.root = (argv.r || argv.root) || config.root;
-    console.log("Project '"+config.root+"' developer mode initialized! Press Ctrl+C to terminate.");
-    runSequence("build", "server", "watch");
+gulp.task("tunnel", ["server"], function() {
+  ngrok.connect(config.port, function (err, url) {
+      if (err) {
+          console.log(err);
+          return;
+      }
+      console.log("Tunnel created at "+url+".");
+  });
+});
+
+gulp.task("default", function() {
+  runSequence("watch", "tunnel");
 });

@@ -1,19 +1,24 @@
 {
   "name": "grandonbroseph.github.io",
   "version": "1.0.0",
-  "description": "A basic website for Grandon Broseph.",
+  "description": "Basic website for Brandon Semilla",
   "repository": {
     "type": "git",
     "url": "https://github.com/GrandonBroseph/grandonbroseph.github.io.git"
   },
   "author": "grandonbroseph (Brandon Semilla)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.15.0",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-jade": "^1.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-connect": "^5.0.0",
+    "gulp-imagemin": "^3.0.3",
     "gulp-pug": "^3.0.4",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "ngrok": "^2.2.3",
+    "run-sequence": "^1.2.2"
   }
 }
