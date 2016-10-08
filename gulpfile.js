@@ -23,7 +23,7 @@ const config = {
 gulp.task("pages", function() {
   return gulp.src(start+"/pages/index.pug")
              .pipe(pug())
-             .pipe(gulp.dest(finish))
+             .pipe(gulp.dest(config.root))
              .pipe(connect.reload());
 });
 
