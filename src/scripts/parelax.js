@@ -22,7 +22,7 @@ module.exports = (function() {
       }
     }
     function listener(event) {
-      scrollPos = (event.target.scrollingElement || document.body).scrollTop;
+      scrollPos = ((event && event.target.scrollingElement) || document.body).scrollTop;
       if (!scrollTick) {
         window.requestAnimationFrame(function() {
           parelax(scrollPos);

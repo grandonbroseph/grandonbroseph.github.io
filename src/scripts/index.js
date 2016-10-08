@@ -5,7 +5,7 @@
 
   function playSWF(id) {
     var element = document.getElementById("swf");
-    swfobject.embedSWF("flash/" + id + ".swf", element, 640, 480, 10, "", {}, {}, {}, function(e) {
+    swfobject.embedSWF("dist/flash/" + id + ".swf", element, 640, 480, 10, "", {}, {}, {}, function(e) {
       if(e.success){
         e.ref.tabIndex = "-1";
         e.ref.focus();

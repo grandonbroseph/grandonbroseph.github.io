@@ -78,7 +78,7 @@ gulp.task("server", function() {
     });
   } else {
     connect.server({
-      root: finish,
+      root: config.root,
       port: config.port
     });
   }
