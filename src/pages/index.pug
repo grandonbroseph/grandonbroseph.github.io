@@ -10,7 +10,7 @@ mixin thumb(id, link)
       a.image.flash(class= id data-flash= id)&attributes(attributes)
         .overlay
           block
-          span Click to play!
+          span Click to play! (requires Flash)
     else
       a.image(class= id href= link target="_blank")&attributes(attributes)
         .overlay
@@ -56,7 +56,7 @@ html
             +thumb("breakout", "flash")
               h3 Breakout
               p Just another barebones Breakout clone with a few interesting power-ups and distracting particle VFX. As for the victory/defeat screens; well, let's just say they used to be funny.
-            +thumb("tetris", "https://grandonbroseph.github.io/mega-man-battle-royale/")
+            +thumb("tetris", "https://grandonbroseph.github.io/tetris/")
               h3 Tetris
               p A classic-style Tetris game complete with a local head-to-head battle system, garbage collection, a fleshed-out AI, and colors that'll make your eyes bleed.
             +thumb("worlds", "https://grandonbroseph.github.io/worlds/")
@@ -77,13 +77,13 @@ html
             +thumb("proto-man")
               h3 Proto Man
               p This fan-made installment in the Mega Man series takes place in between Mega Man 2 and 3. Follow Proto Man as he brings a halt to the new mysterious world threat brewing behind the scenes!
-            +thumb("mario-quiz", "https://grandonbroseph.github.io/chess/")
+            +thumb("chess", "https://grandonbroseph.github.io/chess/")
               h3 Chess
               p Lightweight, cross-platform browser-based chess engine. Multiplayer is on the horizon.
             +thumb("connect-four", "flash")
               h3 Connect Four
               p A classic-style implementation of Connect Four (you know it's your favorite game), with some game-breaking power-ups.
-            +thumb("roguelike", "http://codepen.io/grandon/full/yyGMOp")
+            +thumb("roguelike", "http://cdpn.io/yyGMOp")
               h3 Roguelike
               p A text-based adventure game for the web. It runs a bit slow, so you may have to scale down the window.
       footer.banner-wrap
