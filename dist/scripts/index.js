@@ -3,6 +3,7 @@
   var swfobject = require("./swfobject");
   var parelax = require("./parelax");
   var overlay = document.querySelector(".overlay");
+  var mobile = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
   function playSWF(id) {
     var element = document.getElementById("swf");
@@ -44,45 +45,49 @@
     });
   });
 
-  var image = document.querySelector(".banner-wrap");
-  var header = document.querySelector("header");
-  var headerParent = header.parentNode;
-  var headerSibling = header.nextSibling;
-  var scrollPos = 0;
-  var scrollMax = image.getBoundingClientRect().height;
-  var scrollTick = false;
-  var fragment;
+  if (!mobile) {
+    parelax()
 
-  window.addEventListener("scroll", function(e) {
-    scrollPos = document.body.scrollTop;
-    scrollMax = image.getBoundingClientRect().height;
-    if (!scrollTick) {
-      window.requestAnimationFrame(function() {
-        if (scrollPos > scrollMax) {
-          if (header.parentNode && header.parentNode === headerParent) {
-            fragment = document.createDocumentFragment();
-            fragment.appendChild(headerParent.removeChild(header));
-            header.classList.add("sticky");
-            document.body.appendChild(fragment);
+    var image = document.querySelector(".banner-wrap");
+    var header = document.querySelector("header");
+    var headerParent = header.parentNode;
+    var headerSibling = header.nextSibling;
+    var scrollPos = 0;
+    var scrollMax = image.getBoundingClientRect().height;
+    var scrollTick = false;
+    var fragment;
+
+    window.addEventListener("scroll", function(e) {
+      scrollPos = document.body.scrollTop;
+      scrollMax = image.getBoundingClientRect().height;
+      if (!scrollTick) {
+        window.requestAnimationFrame(function() {
+          if (scrollPos > scrollMax) {
+            if (header.parentNode && header.parentNode === headerParent) {
+              fragment = document.createDocumentFragment();
+              fragment.appendChild(headerParent.removeChild(header));
+              header.classList.add("sticky");
+              document.body.appendChild(fragment);
+            }
+          } else {
+            if (header.parentNode && header.parentNode !== headerParent) {
+              fragment = document.createDocumentFragment();
+              fragment.appendChild(header.parentNode.removeChild(header));
+              headerParent.insertBefore(fragment, headerSibling);
+              header.classList.remove("sticky");
+            }
           }
-        } else {
-          if (header.parentNode && header.parentNode !== headerParent) {
-            fragment = document.createDocumentFragment();
-            fragment.appendChild(header.parentNode.removeChild(header));
-            headerParent.insertBefore(fragment, headerSibling);
-            header.classList.remove("sticky");
-          }
-        }
-        scrollTick = false;
-      });
-    }
-    scrollTick = true;
-  });
+          scrollTick = false;
+        });
+      }
+      scrollTick = true;
+    });
+  }
 })();
 
 },{"./parelax":2,"./swfobject":3}],2:[function(require,module,exports){
 module.exports = (function() {
-  window.addEventListener("load", function() {
+  function load() {
     var attributeName = "data-parallax";
     var elements = document.querySelectorAll("[" + attributeName + "]");
     var data = [];
@@ -118,12 +123,9 @@ module.exports = (function() {
       window.addEventListener(event, listener)
     });
     listener();
-  });
-  return {
-    listen: function() {
-
-    }
-  };
+  }
+  // window.addEventListener("load", load);
+  return load;
 })();
 
 },{}],3:[function(require,module,exports){

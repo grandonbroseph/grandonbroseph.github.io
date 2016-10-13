@@ -1,5 +1,5 @@
 module.exports = (function() {
-  window.addEventListener("load", function() {
+  function load() {
     var attributeName = "data-parallax";
     var elements = document.querySelectorAll("[" + attributeName + "]");
     var data = [];
@@ -35,10 +35,7 @@ module.exports = (function() {
       window.addEventListener(event, listener)
     });
     listener();
-  });
-  return {
-    listen: function() {
-
-    }
-  };
+  }
+  // window.addEventListener("load", load);
+  return load;
 })();
