@@ -1,0 +1,46 @@
+#thumbs {
+  padding: 2px;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.thumb-wrap {
+  padding: 2px;
+  width: calc(100% / 2);
+}
+
+.thumb {
+  $border-width: 2px;
+  $border-offset: 2px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 100% 0 0;
+  overflow: hidden;
+  position: relative;
+  transition: .5s;
+  -webkit-user-select: none;
+  &:active {
+    transform: scale(0.975);
+  }
+}
+
+.thumb-image {
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 480px) {
+  .thumb-wrap {
+    width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 840px) {
+  .thumb-wrap {
+    width: calc(100% / 4);
+  }
+}

@@ -1,0 +1,20 @@
+include jade/_layout.pug
+
+-var items = [ { text: 'Home', href: '#home' }, { text: 'Showcase', href: '#showcase' }, { text: 'About', href: '#about' } ]
+
++page('Lorem Ip-sama', 'Brandon Semilla', items)
+  .box
+    h3#showcase Showcase
+    p Hey there, pleb! This is my house. I put some weird computer things here. Click on them to see more infos!
+    p(v-if='touch || mobile') #[strong Note that I haven't made a whole lot of stuff for mobile/touch devices as of yet], so if you're using one you won't be able to play most of these. I'll probably get to making more of my stuff mobile-friendly soon&trade;.
+  +thumbs
+  +modal
+  .box
+    h3#about About
+    p I made my first computer game in 2008 using Microsoft PowerPoint 2000. Ever since then, I've been having a blast making weird tests and experiments! (I never actually finish anything though because of school ;n;)
+    p Besides "game" development, I've also picked up #[strong web design, animation, pixel art, chiptunes] and a whole ton of other computer things that mostly revolve around games. One of these days I'll sit down and make something actually useful.
+    p Recently, I've taken an interest in some confusing technical computer stuff. Ultimately it's all to help me make things more quickly but it'll probably take a while before I can actually use them :(
+    p That's all for now. Go back to tapping a colored screen or whatever you usually do.
+    figure.image-wrap
+      img.image.emote(src='dist/images/cry.gif')
+      figcaption.image-caption #strongemotions

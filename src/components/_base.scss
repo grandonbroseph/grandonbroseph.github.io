@@ -1,0 +1,96 @@
+@import 'header/header';
+@import 'hero/hero';
+@import 'content/content';
+@import 'thumbs/thumbs';
+@import 'modal/modal';
+@import 'footer/footer';
+
+.material-icons {
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+@keyframes stretch {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+}
+
+@keyframes stretch-round {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    opacity: .5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.button {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(white, .15);
+    transition: .25s;
+  }
+  &::before {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+  &::after {
+    top: 50%;
+    left: 50%;
+    padding: 100% 100% 0 0;
+    opacity: 0;
+    border-radius: 50%;
+    transition: .5s;
+    z-index: 2;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+  &:focus {
+    &:after {
+      animation: stretch 1s forwards;
+    }
+  }
+  &.-dark {
+    &::before, &::after {
+      background: rgba(black, .1);
+    }
+  }
+  &.-round {
+    border-radius: 50%;
+    &::before {
+      border-radius: 50%;
+    }
+    &:focus {
+      &:after {
+        animation: stretch-round .5s forwards;
+      }
+    }
+  }
+  &.-colored {
+    padding: 8px 24px;
+    background: indigo;
+    &, &::before {
+      border-radius: 4px;
+    }
+  }
+}

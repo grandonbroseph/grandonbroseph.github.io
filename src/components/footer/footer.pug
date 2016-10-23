@@ -1,0 +1,12 @@
+mixin footer(name)
+  footer#footer
+    span.footer-text &copy;2016 #{name}.
+    i.footer-text Not really a copyright but at least it looks cool.
+    .break.-light
+    .footer-icons
+      a.button.-round.footer-icon.twitter(href='https://twitter.com/grandonbroseph/' target='_blank')
+        include ../../images/icons/social/twitter.svg
+      a.button.-round.footer-icon.github(href='https://github.com/grandonbroseph/' target='_blank')
+        include ../../images/icons/social/github.svg
+      a.button.-round.footer-icon.codepen(href='http://codepen.io/grandon/' target='_blank')
+        include ../../images/icons/social/codepen.svg

@@ -1,0 +1,29 @@
+mixin modal
+  transition(name='slide')
+    .modal(v-if='index > -1')
+      header.modal-header
+        .modal-block
+          transition(name='fade' mode='out-in')
+            img.modal-platform(v-for='platform in platforms' v-if='current.platform === platform' v-bind:src='`dist/images/${platform.toLowerCase()}.svg`' v-bind:title='`"${current.title}" was programmed in ${platform}.`')
+        transition(name='fade-quick' mode='out-in')
+          h2.modal-title.modal-header-item(v-for='(item, i) in gallery' v-if='index === i') {{ item.title }}
+        button.modal-button.button.-close(title='Click to close modal' @click='close')
+          i.material-icons.modal-icon.modal-header-item close
+      section.modal-hero
+        transition(:name='imageTransition')
+          a.modal-image-link(v-for='(item, i) in gallery' v-if='index === i' v-bind:href='item.href ? item.href : null')
+            span.modal-notice Demo
+            img.modal-image(:src='`dist/images/${item.id}.gif`')
+        button.modal-button.-hero.-left.button(:inactive='index === 0' @click='prev')
+          i.material-icons.modal-icon arrow_left
+        button.modal-button.-hero.-right.button(:inactive='index === gallery.length-1' @click='next')
+          i.material-icons.modal-icon arrow_right
+      transition(name='fade' mode='out-in')
+        section.modal-content(v-for='(item, i) in gallery' v-if='index === i')
+          blockquote.modal-text.-quote(v-if='item.quote' v-html='item.quote')
+          p.modal-text.-description(v-if='item.description' v-html='item.description')
+      .modal-whitespace(@click='close')
+      //- footer.modal-footer
+      //-   button.modal-button.button.-colored.-play
+      //-     i.material-icons.modal-icon.-play play_arrow
+      //-     span.modal-cta Play

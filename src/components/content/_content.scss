@@ -1,0 +1,55 @@
+#article {
+  background: lightgray;
+}
+
+#content {
+
+}
+
+.box {
+  background: white;
+  color: gray;
+  box-shadow: $shadow;
+  padding: 12px 8%;
+}
+
+h3 {
+  padding-top: 12px;
+  text-align: center;
+  font-size: .9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  &:not(:last-child) {
+    padding-bottom: 12px;
+  }
+}
+
+p {
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: 1.75;
+  color: darkgray;
+  // &:not(:last-child) {
+  padding-bottom: .75rem;
+  // }
+}
+
+.image-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.image {
+  width: 64px;
+  height: 64px;
+}
+
+.image-caption {
+  padding: 8px;
+  font-size: .8rem;
+  font-weight: bold;
+  color: darkgray;
+}

@@ -1,24 +1,43 @@
 {
   "name": "grandonbroseph.github.io",
   "version": "1.0.0",
-  "description": "Basic website for Brandon Semilla",
+  "description": "Ongoing draft for my website.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GrandonBroseph/grandonbroseph.github.io.git"
+    "url": "https://github.com/grandonbroseph/grandonbroseph.github.io.git"
   },
-  "author": "grandonbroseph (Brandon Semilla)",
+  "scripts": {
+    "postinstall": "npm start",
+    "start": "npm-run-all imagemin build --parallel serve watch:*",
+    "imagemin": "imagemin src/images/**/*.* --out-dir=dist/images",
+    "serve": "browser-sync start --no-notify --no-ui --server --files \"index.html, dist/*.+(css|js)\" --port 8080",
+    "pug": "pug -P ./src/index.pug -o .",
+    "scss": "node-sass src -o dist",
+    "autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+    "rollup": "rollup src/js/main.js -o dist/main.js",
+    "build": "npm-run-all --parallel build:*",
+    "build:html": "npm run pug",
+    "build:css": "npm-run-all scss autoprefixer",
+    "build:js": "npm run rollup",
+    "watch:html": "pug -Pw src/index.pug -o .",
+    "watch:css": "node-sass -w src -o dist",
+    "watch:js": "rollup -w -i src/js/main.js -o dist/main.js",
+    "onchange:html": "onchange \"src/**/*.pug\" -i -- npm run build:html",
+    "onchange:css": "onchange \"src/**/*.scss\" -i -- npm run build:css",
+    "onchange:js": "onchange \"src/**/*.js\" -i -- npm run build:js"
+  },
+  "author": "Brandon Semilla (grandonbroseph+gh@gmail.com)",
   "license": "MIT",
   "devDependencies": {
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-browserify": "^0.5.1",
-    "gulp-cache": "^0.4.5",
-    "gulp-connect": "^5.0.0",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-pug": "^3.0.4",
-    "gulp-sass": "^2.3.2",
-    "ngrok": "^2.2.3",
-    "run-sequence": "^1.2.2"
+    "autoprefixer": "^6.5.1",
+    "browser-sync": "^2.17.5",
+    "imagemin-cli": "^3.0.0",
+    "npm-run-all": "^3.1.1",
+    "onchange": "^3.0.2",
+    "postcss-cli": "^2.6.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "rollup": "^0.36.3",
+    "rollup-watch": "^2.5.0",
+    "uglifyjs": "^2.4.10"
   }
 }
