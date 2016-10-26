@@ -184,7 +184,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: no-repeat center/cover url(img/hero-castle.jpg);
+    background: no-repeat center/cover url(img/hero.jpg);
     transition: none;
     opacity: .66; }
 
@@ -744,7 +744,7 @@ h4 {
     right: 0;
     bottom: 0;
     left: 0;
-    background: no-repeat center/cover url(img/hero-castle.jpg);
+    background: no-repeat center/cover url(img/hero.jpg);
     opacity: .66;
     z-index: 0; }
   .hero.-main {
