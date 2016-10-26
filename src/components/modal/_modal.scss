@@ -223,8 +223,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 22px 5%;
-    min-height: 96px;
+    padding: 16px 5%;
   }
 
   .platform {
@@ -351,10 +350,13 @@
         font-size: 36px;
       }
     }
-    .cta {
-      font-size: 1.25rem;
-      padding: 8px 8px;
-      padding-right: 10px;
+    .footer {
+      padding: 22px 5%;
+      .cta {
+        font-size: 1.25rem;
+        padding: 8px 8px;
+        padding-right: 10px;
+      }
     }
   }
 }

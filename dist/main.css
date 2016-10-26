@@ -517,8 +517,7 @@ embed {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 22px 5%;
-    min-height: 96px; }
+    padding: 16px 5%; }
   .modal .platform {
     padding: 12px; }
   .modal .cta {
@@ -598,10 +597,12 @@ embed {
     padding: 8px 24px; }
     .modal .button.-play .icon {
       font-size: 36px; }
-  .modal .cta {
-    font-size: 1.25rem;
-    padding: 8px 8px;
-    padding-right: 10px; } }
+  .modal .footer {
+    padding: 22px 5%; }
+    .modal .footer .cta {
+      font-size: 1.25rem;
+      padding: 8px 8px;
+      padding-right: 10px; } }
 
 #footer {
   padding: 8px 16px;

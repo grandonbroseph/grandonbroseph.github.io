@@ -15,7 +15,8 @@ var gallery = [
     platform: "HTML5",
     type: "game",
     href: "https://grandonbroseph.github.io/mega-man-battle-royale/",
-    quote: "Play as heroes and villains from the Mega Man series as you engage each other in competitive, fast-paced head-to-head combat in seventeen unique stages. What's not to love?"
+    quote: "Play as heroes and villains from the Mega Man series as you engage each other in competitive, fast-paced head-to-head combat in seventeen unique stages. What's not to love?",
+    description: "You'll need two people to play this one, but it's worth the effort - Gemini Man is heaps fun."
   },
   {
     title: "Breakout",
@@ -40,6 +41,7 @@ var gallery = [
     platform: "Flash",
     type: "game",
     ratio: "4:3",
+    quote: "A simple shooter about a flying square's struggle against the evil Antagon.",
     description: "Fly over an endless grassy (gradient) expanse and shoot other ships out of the sky!"
   },
   {
@@ -48,6 +50,7 @@ var gallery = [
     platform: "Flash",
     type: "game",
     ratio: "16:15",
+    quote: "An ordinary Cake undertakes a journey through the labyrinth to-- turn vegan? Something's not right here...",
     description: "Eat fruits to collect \"bars\" and proceed to the next level. Consume multiple fruits of the same kind consecutively for bonus points!"
   },
   {
@@ -57,7 +60,7 @@ var gallery = [
     type: "game",
     href: "https://grandonbroseph.github.io/worlds/",
     quote: "A circle-circle physics engine that's out of this world! All sizes and masses are to scale.",
-    description: "Control a random planet/moon with the arrow keys and hit other space rocks."
+    description: "I had originally intended to make this app into some sort of multiplayer bumper cars thing. For now, you just control a random planet/moon with the arrow keys and hit other space rocks."
   },
   {
     title: "Connect Four",
@@ -65,7 +68,6 @@ var gallery = [
     platform: "Flash",
     type: "game",
     ratio: "16:15",
-    quote: "A retro-style version of your favorite game with game-breaking powerups.",
     description: "I really like the facial expressions in this one. The anvil is pretty great, too..."
   },
   {
