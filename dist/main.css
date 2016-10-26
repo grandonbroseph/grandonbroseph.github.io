@@ -479,7 +479,8 @@ embed {
     z-index: 2;
     pointer-events: none; }
   .modal .button {
-    color: inherit; }
+    color: inherit;
+    align-items: center; }
     .modal .button.-hero {
       padding: 14px 0;
       background: rgba(0, 0, 0, 0.5);
@@ -495,7 +496,7 @@ embed {
       .modal .button.-hero .icon {
         padding: 6px; }
     .modal .button.-play .icon {
-      font-size: 36px; }
+      font-size: 24px; }
   .modal .content {
     padding: 8px 16px; }
   .modal .whitespace {
@@ -523,10 +524,9 @@ embed {
   .modal .cta {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: .9rem;
     line-height: 1;
-    padding: 8px 6px;
-    padding-right: 12px; }
+    padding: 5px 6px; }
 
 .slide-enter-active, .slide-leave-active {
   transition: .75s; }
@@ -593,6 +593,16 @@ embed {
     .modal .hero .button.-hero.-right {
       transform: translateX(100%); } }
 
+@media (min-width: 480px) {
+  .modal .button.-play {
+    padding: 8px 24px; }
+    .modal .button.-play .icon {
+      font-size: 36px; }
+  .modal .cta {
+    font-size: 1.25rem;
+    padding: 8px 8px;
+    padding-right: 10px; } }
+
 #footer {
   padding: 8px 16px;
   background: #223;
@@ -622,14 +632,14 @@ embed {
       fill: #778; }
 
 @media (min-width: 1140px) {
-  .footer {
+  #footer {
     display: flex;
     justify-content: space-between; }
-    .footer section {
+    #footer section {
       padding: 8px 16px; }
-    .footer .content .text {
+    #footer .content .text {
       text-align: left; }
-    .footer .break {
+    #footer .break {
       display: none; } }
 
 h3 {
@@ -716,7 +726,7 @@ h4 {
       .button:not([inactive]).-round:focus:after {
         animation: stretch-round .5s forwards; }
   .button.-colored {
-    padding: 8px 24px;
+    padding: 8px 16px;
     background: indigo;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     transition: .25s; }
@@ -747,4 +757,6 @@ h4 {
     position: relative;
     margin-left: 500px;
     background: transparent;
-    padding: 16px 32px; } }
+    padding: 16px 32px; }
+  .button.-colored {
+    padding: 8px 24px; } }

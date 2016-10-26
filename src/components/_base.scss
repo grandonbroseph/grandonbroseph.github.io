@@ -119,7 +119,7 @@ h4 {
     }
   }
   &.-colored {
-    padding: 8px 24px;
+    padding: 8px 16px;
     background: indigo;
     box-shadow: $shadow-subtle;
     transition: .25s;
@@ -154,12 +154,13 @@ h4 {
       display: none;
     }
   }
-  body {
-  }
   #article {
     position: relative;
     margin-left: 500px;
     background: transparent;
     padding: 16px 32px;
+  }
+  .button.-colored {
+    padding: 8px 24px;
   }
 }
