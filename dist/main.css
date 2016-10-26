@@ -593,32 +593,32 @@ embed {
     .modal .hero .button.-hero.-right {
       transform: translateX(100%); } }
 
-.footer {
+#footer {
   padding: 8px 16px;
   background: #223;
   color: white; }
-  .footer .content {
+  #footer .content {
     padding: 8px 16px; }
-    .footer .content .text {
+    #footer .content .text {
       line-height: 1.5;
       font-weight: normal;
       display: block;
       text-align: center; }
-      .footer .content .text.-disclaimer {
+      #footer .content .text.-disclaimer {
         font-style: normal;
         color: #778;
         padding: 0; }
-        .footer .content .text.-disclaimer::before {
+        #footer .content .text.-disclaimer::before {
           content: '('; }
-        .footer .content .text.-disclaimer::after {
+        #footer .content .text.-disclaimer::after {
           content: ')'; }
-  .footer .icons {
+  #footer .icons {
     display: flex;
     justify-content: center; }
-  .footer .icon {
+  #footer .icon {
     padding: 6px;
     margin: 4px; }
-    .footer .icon svg {
+    #footer .icon svg {
       fill: #778; }
 
 @media (min-width: 1140px) {
