@@ -4,6 +4,14 @@ import gallery from './gallery'
 
 var mobile = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 var touch = 'ontouchstart' in window || navigator.maxTouchPoints
+var flash = false
+
+try {
+  flash = !!new ActiveXObject('ShockwaveFlash.ShockwaveFlash')
+}
+catch(e) {
+  flash = typeof navigator.mimeTypes['application/x-shockwave-flash'] !== 'undefined'
+}
 
 var wrap, hero, heroImage, header;
 
@@ -12,23 +20,34 @@ new Vue({
   data: {
     mobile: mobile,
     touch: touch,
-    showNav: false,
+    flash: flash,
+    swf: false,
     showOverlay: false,
-    showHeader: true,
-    colorHeader: false,
     index: -1,
     indexDirection: 0,
     gallery: gallery,
     platforms: ['HTML5', 'Flash', 'Python']
   },
   methods: {
+    wait: function() {
+      var pct, swf = document.querySelector('.swf embed')
+      if (swf && swf.PercentLoaded) {
+        pct = swf.PercentLoaded()
+        if (pct === 100) {
+          swf.tabIndex = Infinity
+          swf.focus()
+          return
+        }
+      }
+      setTimeout(this.wait, 100)
+    },
     move: function(direction) {
       if (direction < 0)
         this.indexDirection = -1
       else if (direction > 0)
         this.indexDirection = 1
       this.index = this.index + direction
-      this.showHeader = false
+      this.swf = false
     },
     moveTo: function(index) {
       this.move(index - this.index)
@@ -71,32 +90,17 @@ new Vue({
     var scrollTick, scrollLast
     wrap = document.querySelector('#wrap')
     hero = document.querySelector('#hero')
-    heroImage = document.querySelector('#hero-image')
-    header = document.querySelector('#header')
+    heroImage = hero.querySelector('.image')
     function scroll(event) {
       if (!scrollTick) {
         window.requestAnimationFrame(function() {
           var heroRect = hero.getBoundingClientRect()
-          var headerRect = header.getBoundingClientRect()
           var scrollPos = document.body.scrollTop
           var scrollDiff = scrollPos - scrollLast
-          var scrollMax = heroRect.height - headerRect.height
+          var scrollMax = heroRect.height
           var scrollPct = (scrollPos / scrollMax * 100) * .5
           if (!touch && !mobile)
             heroImage.style.transform = 'translateY(' + scrollPct + '%)'
-          that.showHeader = scrollPos <= headerRect.height
-          that.colorHeader = scrollPos > scrollMax
-          if (that.colorHeader) {
-            if (scrollDiff) {
-              if (scrollDiff < 0) {
-                that.showHeader = true
-              } else if (scrollDiff > 0) {
-                that.showHeader = false
-              }
-            }
-          }
-          if (!that.showHeader)
-            that.showNav = false
           scrollTick = false
           scrollLast = scrollPos;
         })

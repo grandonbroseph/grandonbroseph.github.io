@@ -1,9 +1,37 @@
 @import 'header/header';
 @import 'hero/hero';
 @import 'content/content';
-@import 'thumbs/thumbs';
+@import 'cards/cards';
 @import 'modal/modal';
 @import 'footer/footer';
+
+h3 {
+  display: flex;
+  align-items: center;
+  font-family: anton;
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: .1rem;
+  &::before, &::after {
+    content: '';
+    display: block;
+    flex: 1;
+    border-top: thin solid white;
+  }
+  &::before {
+    margin-left: 8%;
+    margin-right: .75em;
+  }
+  &::after {
+    margin-right: 8%;
+    margin-left: .75rem;
+  }
+}
+
+h4 {
+  font-size: .8rem;
+  text-transform: uppercase;
+}
 
 .material-icons {
   -webkit-user-select: none;
@@ -32,65 +60,106 @@
 }
 
 .button {
-  cursor: pointer;
   position: relative;
   display: flex;
   overflow: hidden;
-  &::before, &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    background: rgba(white, .15);
-    transition: .25s;
-  }
-  &::before {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    z-index: 1;
-  }
-  &::after {
-    top: 50%;
-    left: 50%;
-    padding: 100% 100% 0 0;
-    opacity: 0;
-    border-radius: 50%;
-    transition: .5s;
-    z-index: 2;
-  }
-  &:hover {
-    &::before {
-      opacity: 1;
-    }
-  }
-  &:focus {
-    &:after {
-      animation: stretch 1s forwards;
-    }
-  }
-  &.-dark {
+  -webkit-user-select: none;
+  cursor: default;
+  &:not([inactive]) {
+    cursor: pointer;
     &::before, &::after {
-      background: rgba(black, .1);
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(white, .15);
+      transition: .25s;
     }
-  }
-  &.-round {
-    border-radius: 50%;
     &::before {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+    &::after {
+      top: 50%;
+      left: 50%;
+      padding: 100% 100% 0 0;
+      opacity: 0;
       border-radius: 50%;
+      transition: .5s;
+      z-index: 2;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
     }
     &:focus {
       &:after {
-        animation: stretch-round .5s forwards;
+        animation: stretch 1s forwards;
+      }
+    }
+    &.-dark {
+      &::before, &::after {
+        background: rgba(black, .1);
+      }
+    }
+    &.-round {
+      border-radius: 50%;
+      &::before {
+        border-radius: 50%;
+      }
+      &:focus {
+        &:after {
+          animation: stretch-round .5s forwards;
+        }
       }
     }
   }
   &.-colored {
     padding: 8px 24px;
     background: indigo;
-    &, &::before {
-      border-radius: 4px;
+    box-shadow: $shadow-subtle;
+    transition: .25s;
+    &[inactive] {
+      color: rgba(white, .25);
+      background: transparentize($dark-light, .5);
+      // pointer-events: none;
     }
+  }
+}
+
+@media (min-width: $break-desktop) {
+  #wrap {
+    background-color: black;
+  }
+  #background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: no-repeat center/cover url(img/hero-castle.jpg);
+    opacity: .66;
+    z-index: 0;
+  }
+  .hero.-main {
+    position: fixed;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    .image {
+      display: none;
+    }
+  }
+  body {
+  }
+  #article {
+    position: relative;
+    margin-left: 500px;
+    background: transparent;
+    padding: 16px 32px;
   }
 }

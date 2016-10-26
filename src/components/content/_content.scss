@@ -1,55 +1,122 @@
 #article {
-  background: lightgray;
+  background: $dark-light;
+  z-index: 1;
 }
 
-#content {
-
+.banner {
+  background: $dark;
+  color: $dark-light;
+  text-align: center;
+  padding: 24px 8%;
+  h3 {
+    &::before, &::after {
+      border-top-color: inherit;
+    }
+  }
+  p {
+    color: white;
+  }
 }
 
 .box {
   background: white;
-  color: gray;
+  color: darkgray;
   box-shadow: $shadow;
-  padding: 12px 8%;
-}
-
-h3 {
-  padding-top: 12px;
-  text-align: center;
-  font-size: .9rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  &:not(:last-child) {
-    padding-bottom: 12px;
+  padding: 1em 8%;
+  h3 {
+    padding-top: .5em;
+    &::before, &::after {
+      border-top-color: inherit;
+    }
+    &:not(:last-child) {
+      padding-bottom: 1em;
+    }
   }
 }
 
-p {
-  font-size: .8rem;
-  font-weight: normal;
-  line-height: 1.75;
-  color: darkgray;
-  // &:not(:last-child) {
-  padding-bottom: .75rem;
-  // }
+.banner, .box {
+  h3 {
+    font-size: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      padding-bottom: .75em;
+    }
+  }
 }
 
-.image-wrap {
+p, span, blockquote {
+  font-size: .75rem;
+}
+
+.figure {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin: auto;
+  .image {
+    width: 64px;
+    height: 64px;
+  }
+  .caption {
+    padding: 8px;
+    font-size: .8rem;
+    font-weight: bold;
+    color: darkgray;
+  }
 }
 
-.image {
-  width: 64px;
-  height: 64px;
+.swf {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.image-caption {
-  padding: 8px;
-  font-size: .8rem;
-  font-weight: bold;
-  color: darkgray;
+embed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 640px) {
+  p, span, blockquote {
+    font-size: .9rem;
+    letter-spacing: 0;
+  }
+  .banner, .box {
+    h3 {
+      font-size: 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      &:not(:last-child) {
+        padding-bottom: .75em;
+      }
+    }
+  }
+}
+
+@media (min-width: $break-desktop) {
+  .banner {
+    background: transparent;
+    color: white;
+    text-align: center;
+    padding: 1em 13.33%;
+    p {
+      font-size: 14px;
+    }
+  }
+  .box {
+    // background: transparent;
+    // color: white;
+    // box-shadow: none;
+    // p {
+    //   color: white;
+    // }
+  }
 }

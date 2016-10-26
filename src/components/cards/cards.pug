@@ -1,0 +1,8 @@
+mixin cards
+  #cards
+    .card-wrap(v-for='(card, i) in gallery')
+      button.card.button(@click='moveTo(i)')
+        .thumb
+          img(:src='`dist/img/${card.id}.png`')
+        .content
+          h4(v-html='card.title')

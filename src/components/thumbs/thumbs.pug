@@ -1,5 +1,0 @@
-mixin thumbs
-  #thumbs
-    .thumb-wrap(v-for='(thumb, i) in gallery')
-      button.thumb.button(@click='moveTo(i)')
-        img.thumb-image(:src='`dist/images/${thumb.id}.png`')

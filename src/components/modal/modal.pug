@@ -1,29 +1,47 @@
 mixin modal
+  transition(name='fade')
+    .overlay(v-if='index > -1')
   transition(name='slide')
     .modal(v-if='index > -1')
-      header.modal-header
-        .modal-block
-          transition(name='fade' mode='out-in')
-            img.modal-platform(v-for='platform in platforms' v-if='current.platform === platform' v-bind:src='`dist/images/${platform.toLowerCase()}.svg`' v-bind:title='`"${current.title}" was programmed in ${platform}.`')
-        transition(name='fade-quick' mode='out-in')
-          h2.modal-title.modal-header-item(v-for='(item, i) in gallery' v-if='index === i') {{ item.title }}
-        button.modal-button.button.-close(title='Click to close modal' @click='close')
-          i.material-icons.modal-icon.modal-header-item close
-      section.modal-hero
+      //- .cancel(@click='close')
+      header.component.header
+        .block
+          transition(name='slide-fade' mode='out-in')
+            img.platform(v-for='(item, i) in gallery' v-if='index === i' v-bind:src='`dist/img/${item.platform.toLowerCase()}.svg`' v-bind:title='`"${item.title}" was programmed in ${item.platform}.`')
+        transition(name='slide-fade-quick' mode='out-in')
+          h2.title(v-for='(item, i) in gallery' v-if='index === i') {{ item.title }}
+        button.button.button.-close(title='Click to close modal' @click='close')
+          i.material-icons.icon.header-item close
+      section.component.hero
         transition(:name='imageTransition')
-          a.modal-image-link(v-for='(item, i) in gallery' v-if='index === i' v-bind:href='item.href ? item.href : null')
-            span.modal-notice Demo
-            img.modal-image(:src='`dist/images/${item.id}.gif`')
-        button.modal-button.-hero.-left.button(:inactive='index === 0' @click='prev')
-          i.material-icons.modal-icon arrow_left
-        button.modal-button.-hero.-right.button(:inactive='index === gallery.length-1' @click='next')
-          i.material-icons.modal-icon arrow_right
-      transition(name='fade' mode='out-in')
-        section.modal-content(v-for='(item, i) in gallery' v-if='index === i')
-          blockquote.modal-text.-quote(v-if='item.quote' v-html='item.quote')
-          p.modal-text.-description(v-if='item.description' v-html='item.description')
-      .modal-whitespace(@click='close')
-      //- footer.modal-footer
-      //-   button.modal-button.button.-colored.-play
-      //-     i.material-icons.modal-icon.-play play_arrow
-      //-     span.modal-cta Play
+          .wrap(v-for='(item, i) in gallery' v-if='index === i')
+            .swf(v-if='swf' v-bind:data-aspect-ratio='item.ratio')
+              canvas(width=16 height=9)
+              embed(:src="`dist/swf/${item.id}.swf`")
+            a.image-link(v-else)
+              .button-wrap(v-if='item.platform === `Flash` && flash || item.platform !== `Flash` && item.href')
+                a.play.button(v-if="item.platform !== 'Flash'" v-bind:href='item.href' target='_blank')
+                  i.material-icons.icon.-play play_arrow
+                button.play.button(v-else @click='swf = true; wait()')
+                  i.material-icons.icon.-play play_arrow
+              span.notice Demo
+              img(v-bind:src='`dist/img/${item.id}.gif`')
+        .arrows
+          button.button.-hero.-left.button(:inactive='index === 0' @click='prev')
+            i.material-icons.icon keyboard_arrow_left
+          button.button.-hero.-right.button(:inactive='index === gallery.length-1' @click='next')
+            i.material-icons.icon keyboard_arrow_right
+      transition(name='slide-fade' mode='out-in')
+        section.component.content(v-for='(item, i) in gallery' v-if='index === i')
+          blockquote.text.-quote(v-if='item.quote' v-html='item.quote')
+          p.text.-description(v-if='item.description' v-html='item.description')
+          blockquote.text.-quote(v-if='item.platform === `Flash` && !flash') This movie requires Flash Player.
+      .component.whitespace
+      transition(name='slide-fade' mode='out-in')
+        footer.component.footer(v-for='(item, i) in gallery' v-if='index === i')
+          button.button.-colored.-play(v-if='item.platform === `Flash`' v-bind:inactive='!flash || swf' @click='swf = true; wait()')
+            i.material-icons.icon.-play play_arrow
+            span.cta Play
+          a.button.-colored.-play(v-else v-bind:inactive='!item.href' v-bind:href='item.href' target='_blank' v-bind:title='!!item.href ? `Open ${item.title} in a new tab` : `Demo for ${item.title} unavailable`')
+            i.material-icons.icon.-play play_arrow
+            span.cta Play

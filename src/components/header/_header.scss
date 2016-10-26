@@ -93,7 +93,7 @@
 
 .break {
   margin: 6px 12px;
-  border-top: thin solid rgba($dark, .25);
+  border-top: thin solid $dark-light;
   &.-light {
     border-color: rgba(white, .25);
   }
