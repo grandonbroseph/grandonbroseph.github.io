@@ -1,6 +1,6 @@
 mixin modal
   transition(name='fade')
-    .overlay(v-if='index > -1')
+    .overlay(v-if='index > -1' @click='close')
   transition(name='slide')
     .modal(v-if='index > -1')
       //- .cancel(@click='close')
@@ -13,19 +13,21 @@ mixin modal
         button.button.button.-close(title='Click to close modal' @click='close')
           i.material-icons.icon.header-item close
       section.component.hero
+        .scaler
         transition(:name='imageTransition')
           .wrap(v-for='(item, i) in gallery' v-if='index === i')
-            .swf(v-if='swf' v-bind:data-aspect-ratio='item.ratio')
-              canvas(width=16 height=9)
-              embed(:src="`dist/swf/${item.id}.swf`")
-            a.image-link(v-else)
-              .button-wrap(v-if='item.platform === `Flash` && flash || item.platform !== `Flash` && item.href')
-                a.play.button(v-if="item.platform !== 'Flash'" v-bind:href='item.href' target='_blank')
-                  i.material-icons.icon.-play play_arrow
-                button.play.button(v-else @click='swf = true; wait()')
-                  i.material-icons.icon.-play play_arrow
-              span.notice Demo
-              img(v-bind:src='`dist/img/${item.id}.gif`')
+            .scaler
+              .swf(v-if='swf' v-bind:data-aspect-ratio='item.ratio')
+                canvas(width=16 height=9)
+                embed(:src="`dist/swf/${item.id}.swf`")
+              a.image-link(v-else)
+                .button-wrap(v-if='item.platform === `Flash` && flash || item.platform !== `Flash` && item.href')
+                  a.play.button(v-if="item.platform !== 'Flash'" v-bind:href='item.href' target='_blank')
+                    i.material-icons.icon.-play play_arrow
+                  button.play.button(v-else @click='swf = true; wait()')
+                    i.material-icons.icon.-play play_arrow
+                span.notice Demo
+                img(v-bind:src='`dist/img/${item.id}.gif`')
         .arrows
           button.button.-hero.-left.button(:inactive='index === 0' @click='prev')
             i.material-icons.icon keyboard_arrow_left
