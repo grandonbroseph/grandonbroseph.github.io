@@ -3,6 +3,9 @@
   background: $dark;
   color: white;
   .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 8px 16px;
     .text {
       line-height: 1.5;

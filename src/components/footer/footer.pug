@@ -1,13 +1,12 @@
 mixin footer(name)
   footer#footer.footer
     section.content
-      span.text &copy;2016 #{name}.
-      blockquote.text.-disclaimer Not really a copyright but at least it looks cool.
+      span.text Copyright &copy; #{new Date().getFullYear()} #{name}.
     .break.-light
     section.icons
       a.button.-round.icon.twitter(href='https://twitter.com/grandonbroseph/' target='_blank')
         include ../../img/svg/twitter.svg
-      a.button.-round.icon.github(href='https://github.com/grandonbroseph/' target='_blank')
+      a.button.-round.icon.github(href='https://github.com/semibran/' target='_blank')
         include ../../img/svg/github.svg
-      a.button.-round.icon.codepen(href='http://codepen.io/grandon/' target='_blank')
+      a.button.-round.icon.codepen(href='http://codepen.io/semibran/' target='_blank')
         include ../../img/svg/codepen.svg
