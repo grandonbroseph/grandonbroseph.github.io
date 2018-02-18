@@ -6,7 +6,7 @@ SHELL := /bin/bash
 .ONESHELL:
 .SILENT:
 
-all: js css html
+all:
 	rm -rf dist
 	mkdir dist
 	make js css html
