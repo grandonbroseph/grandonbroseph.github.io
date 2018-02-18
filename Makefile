@@ -26,4 +26,4 @@ html:
 	cp src/index.html dist/index.html
 
 deploy: all
-	gh-pages -d dist -m "updates"
+	gh-pages -d dist -b master -m "updates"
