@@ -1,3 +1,5 @@
+@import "cube";
+
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +13,6 @@ html, body {
   height: 100%;
 }
 
-main {
-  margin: 12.5%;
-  animation-name: appear;
-  animation-duration: 2s;
-}
-
 h1, h2 {
   font-weight: normal;
   line-height: 1;
@@ -26,6 +22,8 @@ h1 {
   color: gray;
   font-family: Montserrat;
   font-size: 4rem;
+  animation-name: appear;
+  animation-duration: 2s;
 }
 
 h2 {
@@ -34,6 +32,28 @@ h2 {
   font-size: 1.5rem;
   letter-spacing: 0.0625rem;
   margin: 0.5rem;
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.headings {
+  position: relative;
+  z-index: 1;
+  margin: 12.5%;
+}
+
+.cube {
+  position: absolute;
+  left: 75%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cube .face {
+  border-color: silver;
 }
 
 @keyframes appear {
