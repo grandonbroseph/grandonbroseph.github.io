@@ -9,6 +9,7 @@ SHELL := /bin/bash
 all:
 	rm -rf dist
 	mkdir dist
+	cp src/ico/* dist
 	make js css html
 	babel dist/script.js --presets=env | uglifyjs -o dist/script.js -c -m
 	postcss dist/style.css -u autoprefixer -o dist/style.css -m
