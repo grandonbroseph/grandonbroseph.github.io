@@ -1,30 +1,29 @@
 # GNU Make 3.8.2 and above
 
-PATH := $(PATH):node_modules/.bin
+PATH := $(PWD)/node_modules/.bin:$(PATH)
 SHELL := /bin/bash
 
-.ONESHELL:
-.SILENT:
-
-all:
-	rm -rf dist
-	mkdir dist
-	cp -r src/img src/ico/* -t dist
-	make js css html
-	babel dist/script.js --presets=env | uglifyjs -o dist/script.js -c -m
-	postcss dist/style.css -u autoprefixer -o dist/style.css -m
+all: clean
+	esbuild src/index.js --bundle --minify --outfile=dist/index.js
+	postcss src/style.css -u autoprefixer -o dist/style.css -m
 	cleancss dist/style.css -o dist/style.css --source-map --source-map-inline-sources
-	html-minifier --collapse-whitespace dist/index.html -o dist/index.html
-	rm dist/script.js.map dist/style.css.map
+	html-minifier --collapse-whitespace src/index.html -o dist/index.html
+	rm dist/*.map
 
-js:
-	rollup src/script.js -o dist/script.js -f iife -c -m
+watch: clean js css html
+	chokidar "src/**/*.js" -c "make js" \
+	& chokidar "src/*.css" -c "make css" \
+	& chokidar "src/*.html" -c "make html" \
 
-css:
-	node-sass src/style.scss -o dist --source-map true --source-map-contents
+clean:
+	rm -rf dist
+	mkdir -p dist/tmp
 
 html:
 	cp src/index.html dist/index.html
 
-deploy: all
-	gh-pages -d dist -b master -m "updates"
+css:
+	cp src/style.css dist/style.css
+
+js:
+	esbuild src/index.js --bundle --sourcemap --outfile=dist/index.js

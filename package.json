@@ -1,20 +1,19 @@
 {
   "name": "semibran.github.io",
   "version": "0.0.0",
-  "description": "personal website",
-  "author": "brandon semilla (https://github.com/semibran)",
+  "description": "Brandon Semilla's portfolio website",
   "repository": "semibran/semibran.github.io",
+  "author": "semibran",
   "license": "MIT",
+  "main": "src/index.js",
+  "keywords": [],
   "devDependencies": {
-    "autoprefixer": "^8.0.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "clean-css-cli": "^4.1.10",
-    "gh-pages": "^1.1.0",
-    "html-minifier": "^3.5.9",
-    "node-sass": "^4.7.2",
-    "postcss-cli": "^5.0.0",
-    "rollup": "^0.56.1",
-    "uglify-js": "^3.3.11"
+    "autoprefixer": "*",
+    "chokidar-cli": "*",
+    "clean-css-cli": "*",
+    "esbuild": "*",
+    "html-minifier": "*",
+    "postcss": "*",
+    "postcss-cli": "*"
   }
 }
