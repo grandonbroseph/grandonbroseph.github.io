@@ -1,12 +1,6 @@
 {
   "name": "semibran.github.io",
-  "version": "0.0.0",
-  "description": "Brandon Semilla's portfolio website",
-  "repository": "semibran/semibran.github.io",
-  "author": "semibran",
   "license": "MIT",
-  "main": "src/index.js",
-  "keywords": [],
   "devDependencies": {
     "autoprefixer": "*",
     "chokidar-cli": "*",

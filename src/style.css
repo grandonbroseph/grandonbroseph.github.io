@@ -3,3 +3,62 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 400px;
+  transform-origin: center center;
+}
+
+.headings {
+  font-family: Quicksand;
+  margin-right: 3rem;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: 0.0625rem;
+  color: white;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.image {
+  transform: rotateY(-11.25deg);
+}
+
+.image, .image::before {
+  background: url(assets/tactics.png);
+}
+
+.image, .image::before, .image::after {
+  position: relative;
+  width: 512px;
+  height: 512px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  image-rendering: pixelated;
+}
+
+.image::before, .image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  transform-origin: bottom left;
+  transform: scaleY(-1);
+}
+
+.image::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.5));
+}
