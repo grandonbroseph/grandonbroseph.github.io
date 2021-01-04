@@ -1,5 +1,5 @@
 export const tactics = {
-  images: ['assets/tactics.png'],
+  images: ['assets/tactics.png', 'assets/tactics.png'],
   name: 'Untitled Tactical RPG',
   platform: 'web',
   lifespan: [2018, 'present'],

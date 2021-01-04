@@ -9,11 +9,13 @@ body {
   color: lightgray;
   font-family: "Work Sans", sans-serif;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .project {
   display: flex;
   justify-content: center;
+  padding: 0 3rem;
 }
 
 .project-content {
@@ -24,13 +26,13 @@ body {
   margin: 0 0.5rem;
 }
 
-.article-header {
+.project-header {
   display: flex;
   align-items: center;
   margin: 2rem 0 1rem;
 }
 
-.headings {
+.project-headings {
   font-family: Quicksand, sans-serif;
   margin-right: 2rem;
 }
@@ -63,47 +65,40 @@ h2 {
 }
 
 p {
-  margin-left: 2.5rem;
   line-height: 1.75;
   margin-top: 1rem;
 }
 
 .project-preview {
   position: relative;
-  height: 512px;
+  height: 240px;
   perspective: 400px;
 }
 
-.image {
-  position: absolute;
-  left: 0;
-  top: 0;
+.preview-imagewrap {
+  display: flex;
+  flex-direction: column;
   transform: rotateY(-11.25deg);
 }
 
-.image, .image::before {
-  background: url(assets/tactics.png);
-}
-
-.image, .image::before, .image::after {
-  position: relative;
+.preview-image {
   width: 512px;
-  height: 512px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
   image-rendering: pixelated;
 }
 
-.image::before, .image::after {
+.preview-refl {
+  position: absolute;
+  top: 100%;
+  transform: scaleY(-1);
+  display: flex;
+}
+
+.preview-refl::before {
   content: "";
   display: block;
   position: absolute;
-  transform-origin: bottom left;
-  transform: scaleY(-1);
-}
-
-.image::after {
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 25%,
@@ -115,7 +110,6 @@ p {
 }
 
 .carousel-image {
-  margin-left: 2.5rem;
   width: 128px;
   image-rendering: pixelated;
 }
