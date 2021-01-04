@@ -11,12 +11,12 @@ body {
   min-height: 100vh;
 }
 
-.content {
+.project {
   display: flex;
   justify-content: center;
 }
 
-article {
+.project-content {
   margin-top: 8rem;
 }
 
@@ -68,7 +68,7 @@ p {
   margin-top: 1rem;
 }
 
-aside {
+.project-preview {
   position: relative;
   height: 512px;
   perspective: 400px;

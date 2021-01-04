@@ -1,3 +1,5 @@
+dependencies:
+  '@semibran/patch': 2.0.0
 devDependencies:
   autoprefixer: 10.1.0_postcss@8.2.2
   chokidar-cli: 2.1.0
@@ -72,6 +74,10 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-8Broas6vTtW4GIXTAHDoE32hnN2M5ykgCpWGbuXHQ15vEMqr23pB76e/GZcYsZCHALv50ktd24qhEyKr6wBtow==
+  /@semibran/patch/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-8kkCNgJqIhG1ACO/Ed5eHKrMfZVKqHdDx61Gc02NfAzCTmFOFN8I7tk3dFlnrs4cueJ1UbqDF2qwR13PFcH0Dw==
   /@types/json5/0.0.29:
     dev: true
     resolution:
@@ -2090,6 +2096,7 @@ packages:
     resolution:
       integrity: sha512-D1mvvtDG0L5ft/jGWkLpG1+m0eQxOfaBvTNELraWj22wSVUMWxZUvYgJYcKh6jGGIkJFhH4IZPQhR4TKpc8mBw==
 specifiers:
+  '@semibran/patch': ^2.0.0
   autoprefixer: ^10.1.0
   chokidar-cli: ^2.1.0
   clean-css-cli: ^4.3.0
