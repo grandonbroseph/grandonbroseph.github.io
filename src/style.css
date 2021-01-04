@@ -9,15 +9,15 @@ body {
   color: lightgray;
   font-family: "Work Sans", sans-serif;
   min-height: 100vh;
+}
+
+.content {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  transform-origin: center center;
 }
 
 article {
   margin-top: 8rem;
-  margin-right: 2rem;
 }
 
 .button {
@@ -33,6 +33,22 @@ article {
 .headings {
   font-family: Quicksand, sans-serif;
   margin-right: 2rem;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 2.5rem;
+  color: white;
+}
+
+.icon.-back {
+  transform: scaleX(-1);
+}
+
+.back-text {
+  font-weight: bold;
+  margin-left: 0.5rem;
 }
 
 h1 {
