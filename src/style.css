@@ -13,7 +13,6 @@ body {
   justify-content: center;
   align-items: stretch;
   transform-origin: center center;
-  padding: 0 3rem;
 }
 
 article {
@@ -21,9 +20,19 @@ article {
   margin-right: 2rem;
 }
 
+.button {
+  margin: 0 0.5rem;
+}
+
+.article-header {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0 1rem;
+}
+
 .headings {
   font-family: Quicksand, sans-serif;
-  margin: 2rem 0 1rem;
+  margin-right: 2rem;
 }
 
 h1 {
@@ -38,6 +47,7 @@ h2 {
 }
 
 p {
+  margin-left: 2.5rem;
   line-height: 1.75;
   margin-top: 1rem;
 }
@@ -89,6 +99,7 @@ aside {
 }
 
 .carousel-image {
+  margin-left: 2.5rem;
   width: 128px;
   image-rendering: pixelated;
 }
