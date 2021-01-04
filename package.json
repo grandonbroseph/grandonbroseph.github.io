@@ -2,12 +2,17 @@
   "name": "semibran.github.io",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "*",
-    "chokidar-cli": "*",
-    "clean-css-cli": "*",
-    "esbuild": "*",
-    "html-minifier": "*",
-    "postcss": "*",
-    "postcss-cli": "*"
+    "autoprefixer": "^10.1.0",
+    "chokidar-cli": "^2.1.0",
+    "clean-css-cli": "^4.3.0",
+    "esbuild": "^0.8.29",
+    "eslint": "^7.17.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.2.2",
+    "postcss-cli": "^8.3.1"
   }
 }
