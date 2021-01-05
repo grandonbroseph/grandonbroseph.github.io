@@ -105,6 +105,12 @@ p {
   margin-top: 1rem;
 }
 
+.title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.125rem;
+}
+
 .project-preview {
   position: relative;
   height: 240px;

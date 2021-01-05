@@ -18,6 +18,6 @@ export const proto = {
   lifespan: [2014],
   content: [
     'This project was a clone of the classic Mega Man games for the NES/Famicom. The player jumps and shoots their way through side-scrolling stages, defeating enemies, avoiding hazards, and overcoming bosses.',
-    'Over the course of this project, I had the opportunity to design characters and custom sprites to fit an established aesthetic both visually and mechanically. I also discovered ways to mimic VFX and audio channel limitations as they might occur on the original hardware.'
+    'Over the course of this project, I had the opportunity to design characters and custom sprites to fit an established aesthetic both visually and mechanically and use music I wrote inside a game. I also discovered ways to mimic VFX and audio channel limitations as they might occur on the original hardware.'
   ]
 }
