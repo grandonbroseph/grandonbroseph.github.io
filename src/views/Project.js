@@ -17,8 +17,14 @@ export default function Project(project) {
       )),
       h.div({ class: 'project-header' }, [
         h.div({ class: 'project-headings' }, [
-          h.h1({ class: 'project-title'},
-            [`${project.title} (${lifespan})`]),
+          h.h1({ class: 'project-title'}, [
+            `${project.title} (${lifespan})`,
+            h.div({ class: 'project-nav' }, [
+              h.span({ class: 'icon -arrow -prev material-icons-round' }, ['keyboard_arrow_left']),
+              h.span({ class: 'nav-text' }, ['2 of 2']),
+              h.span({ class: 'icon -arrow -next material-icons-round' }, ['keyboard_arrow_right'])
+            ])
+          ]),
           h.h2({ class: 'project-subtitle' }, [project.subtitle])
         ]),
       ]),

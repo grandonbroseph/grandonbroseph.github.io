@@ -15,7 +15,12 @@ body {
 .project {
   display: flex;
   justify-content: center;
-  padding: 4rem 8%;
+  padding: 3rem 8%;
+}
+
+.platform {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .button {
@@ -29,7 +34,7 @@ body {
 }
 
 .project-headings {
-  margin-right: 2rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -59,14 +64,37 @@ body {
   margin-left: 1rem;
 }
 
+.project-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-nav {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.nav-text {
+  margin: 0 0.5rem;
+}
+
+.icon.-arrow {
+  font-size: 2rem;
+}
+
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   letter-spacing: 0.0625rem;
   color: black;
 }
 
 h2 {
-  font-size: 1.25rem;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  font-size: 1rem;
   color: blue;
   order: -1;
 }
@@ -81,18 +109,18 @@ p {
   position: relative;
   height: 240px;
   perspective: 400px;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 .preview-imagewrap {
   display: flex;
   flex-direction: column;
-  transform: rotateY(-11.25deg) translateX(-26px);
+  transform: rotateY(-11.25deg) translateX(-26px) translateZ(0);
+  transform-origin: 50% 51%;
 }
 
 .preview-image {
   width: 512px;
-  image-rendering: pixelated;
 }
 
 .preview-refl {
@@ -111,7 +139,7 @@ p {
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 1) 25%,
-    rgba(255, 255, 255, 0.75));
+    rgba(255, 255, 255, 0.5));
 }
 
 .carousel {
@@ -124,7 +152,8 @@ p {
 }
 
 .carousel-image.-select {
-  outline: 3px solid black;
+  border: 2px solid white;
+  outline: 3px solid blue;
 }
 
 .carousel-image + .carousel-image {

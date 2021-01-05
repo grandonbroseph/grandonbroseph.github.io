@@ -1,7 +1,7 @@
 export const tactics = {
-  images: ['assets/tactics.png', 'assets/tactics.png'],
-  title: 'Untitled Strategy RPG',
-  subtitle: '',
+  images: ['assets/tactics-00.png', 'assets/tactics-01.png'],
+  title: 'Taciturn',
+  subtitle: 'Tactical Espionage Action',
   platform: 'web',
   lifespan: [2018, 2020],
   content: [
@@ -17,7 +17,7 @@ export const proto = {
   platform: 'python',
   lifespan: [2014],
   content: [
-    'This project was a pastiche of the classic Mega Man games for the NES/Famicom. The player jumps and shoots their way through side-scrolling stages, defeating enemies, avoiding hazards, and overcoming bosses.',
-    'Over the course of this project, I had the opportunity to design characters and custom sprites to fit an established aesthetic both visually and mechanically. I also discovered ways to mimic visual effects and audio channel limitations as they might take place on the original hardware.'
+    'This project was a clone of the classic Mega Man games for the NES/Famicom. The player jumps and shoots their way through side-scrolling stages, defeating enemies, avoiding hazards, and overcoming bosses.',
+    'Over the course of this project, I had the opportunity to design characters and custom sprites to fit an established aesthetic both visually and mechanically. I also discovered ways to mimic VFX and audio channel limitations as they might occur on the original hardware.'
   ]
 }
