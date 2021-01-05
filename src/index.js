@@ -8,7 +8,8 @@ const $root = document.querySelector('main')
 patch($root, h.main([
   h.header({ class: 'header' }, [
     h.div({ class: 'back' }, [
-      h.span({ class: 'back-icon' })
+      h.span({ class: 'icon -back material-icons-round' }, ['arrow_right_alt']),
+      'Home'
     ])
   ]),
   Project(projects.tactics)

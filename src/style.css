@@ -33,20 +33,21 @@ body {
   margin-right: 2rem;
 }
 
+.header {
+  margin: 0 8%;
+  padding: 1.5rem 0;
+}
+
 .back {
   display: flex;
   align-items: center;
-  margin: 1.5rem 2.5rem;
   color: white;
+  font-weight: bold;
 }
 
 .icon.-back {
   transform: scaleX(-1);
-}
-
-.back-text {
-  font-weight: bold;
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 h1 {
