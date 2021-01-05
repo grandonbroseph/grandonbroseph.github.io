@@ -15,11 +15,7 @@ body {
 .project {
   display: flex;
   justify-content: center;
-  padding: 0 3rem;
-}
-
-.project-content {
-  margin-top: 8rem;
+  padding: 4rem 8%;
 }
 
 .button {
@@ -73,6 +69,7 @@ p {
   position: relative;
   height: 240px;
   perspective: 400px;
+  margin-left: 2rem;
 }
 
 .preview-imagewrap {
