@@ -109,7 +109,7 @@ p {
 
 .carousel-image {
   width: 128px;
-  image-rendering: pixelated;
+  outline: thin solid #333;
 }
 
 .carousel-image.-select {

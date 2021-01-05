@@ -12,5 +12,5 @@ patch($root, h.main([
       'Home'
     ])
   ]),
-  Project(projects.tactics)
+  Project(projects.proto)
 ]))

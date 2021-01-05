@@ -3,6 +3,10 @@ import * as h from '../lib/vdom'
 export default function Project(project) {
   const selectidx = 0
   const selectsrc = project.images[selectidx]
+  let lifespan = project.lifespan[0].toString()
+  if (project.lifespan.length === 2) {
+    lifespan += ' - ' + project.lifespan[1]
+  }
   return h.div({ class: 'project' }, [
     h.article({ class: 'project-content' }, [
       h.div({ class: 'project-carousel' },
@@ -15,7 +19,7 @@ export default function Project(project) {
         h.div({ class: 'project-headings' }, [
           h.h1({ class: 'project-title'}, [project.name]),
           h.h2({ class: 'project-lifespan' },
-            [`${project.lifespan[0]} - ${project.lifespan[1]}`])
+            [lifespan])
         ]),
       ]),
       ...project.content.map(text => h.p([text]))
