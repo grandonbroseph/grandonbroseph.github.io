@@ -5,7 +5,7 @@ export default function Project(project) {
   const selectsrc = project.images[selectidx]
   let lifespan = project.lifespan[0].toString()
   if (project.lifespan.length === 2) {
-    lifespan += ' - ' + project.lifespan[1]
+    lifespan += '-' + project.lifespan[1]
   }
   return h.div({ class: 'project' }, [
     h.article({ class: 'project-content' }, [
@@ -17,9 +17,9 @@ export default function Project(project) {
       )),
       h.div({ class: 'project-header' }, [
         h.div({ class: 'project-headings' }, [
-          h.h1({ class: 'project-title'}, [project.name]),
-          h.h2({ class: 'project-lifespan' },
-            [lifespan])
+          h.h1({ class: 'project-title'},
+            [`${project.title} (${lifespan})`]),
+          h.h2({ class: 'project-subtitle' }, [project.subtitle])
         ]),
       ]),
       ...project.content.map(text => h.p([text]))

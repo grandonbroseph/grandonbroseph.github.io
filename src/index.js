@@ -10,6 +10,10 @@ patch($root, h.main([
     h.div({ class: 'back' }, [
       h.span({ class: 'icon -back material-icons-round' }, ['arrow_right_alt']),
       'Home'
+    ]),
+    h.div({ class: 'theme-select' }, [
+      h.span({ class: 'theme-icon icon -light material-icons-round' }, ['wb_sunny']),
+      h.span({ class: 'theme-icon icon -dark material-icons-round' }, ['brightness_2']),
     ])
   ]),
   Project(projects.proto)
