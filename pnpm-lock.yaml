@@ -15,6 +15,7 @@ devDependencies:
   html-minifier: 4.0.0
   postcss: 8.2.2
   postcss-cli: 8.3.1_postcss@8.2.2
+  react-dom: 17.0.1_react@17.0.1
   react-router-dom: 5.2.0_react@17.0.1
 lockfileVersion: 5.2
 packages:
@@ -2794,6 +2795,17 @@ packages:
     optional: true
     resolution:
       integrity: sha512-TuDE5KxZ0J461RVjrJZCJc+J+zCkTb1MbH9AQUq68sMhOMcy9jLcb3BrZKgp9q9Ncltdg4QVqWrH02W2EFFVYw==
+  /react-dom/17.0.1_react@17.0.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react: 17.0.1
+      scheduler: 0.20.1
+    dev: true
+    peerDependencies:
+      react: 17.0.1
+    resolution:
+      integrity: sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
   /react-is/16.13.1:
     dev: true
     resolution:
@@ -3056,6 +3068,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-u1pUuzqwz3SAgvHSWp1k0mRhX82b2DdlVnP6UIetQPZtYbuJUDaPQhZE12jyjB7vYeOScfz9WPsZJB6Rpk7heA==
+  /scheduler/0.20.1:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: true
+    resolution:
+      integrity: sha512-LKTe+2xNJBNxu/QhHvDR14wUXHRQbVY5ZOYpOGWRzhydZUqrLb2JBvLPY7cAqFmqrWuDED0Mjk7013SZiOz6Bw==
   /semver/5.7.1:
     dev: true
     hasBin: true
@@ -3655,5 +3674,6 @@ specifiers:
   postcss: ^8.2.2
   postcss-cli: ^8.3.1
   react: ^17.0.1
+  react-dom: ^17.0.1
   react-router-dom: ^5.2.0
   sass: ^1.32.2

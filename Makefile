@@ -3,7 +3,7 @@
 MAKEFLAGS += --no-print-directory
 
 .EXPORT_ALL_VARIABLES:
-.SILENT:
+.PHONY: all start prepare css js build html
 
 PATH := $(PWD)/node_modules/.bin:$(PATH)
 SHELL := /bin/bash
@@ -28,10 +28,10 @@ html:
 	cp src/index.html dist/index.html
 
 css:
-	sass src/style.scss -o dist/style.css
+	sass src/style.scss dist/style.css
 
 js:
-	esbuild src/index.js --bundle --sourcemap --outfile=dist/index.js
+	esbuild src/index.js --bundle --sourcemap --define:process.env.NODE_ENV=\"dev\" --loader:.js=jsx --outfile=dist/index.js
 
 assets:
 	cp src/assets/* dist/assets
