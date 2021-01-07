@@ -10,7 +10,6 @@ SHELL := /bin/bash
 
 all: clean assets
 	esbuild src/index.js --bundle --minify --outfile=dist/index.js
-	postcss src/style.css -u autoprefixer -o dist/style.css -m
 	cleancss dist/style.css -o dist/style.css --source-map --source-map-inline-sources
 	html-minifier --collapse-whitespace src/index.html -o dist/index.html
 	rm dist/*.map
@@ -29,7 +28,7 @@ html:
 	cp src/index.html dist/index.html
 
 css:
-	cp src/style.css dist/style.css
+	sass src/style.scss -o dist/style.css
 
 js:
 	esbuild src/index.js --bundle --sourcemap --outfile=dist/index.js
