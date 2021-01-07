@@ -16,7 +16,7 @@ all: clean assets
 
 watch: clean js css html assets
 	chokidar "src/**/*.js" -c "make js" \
-	& chokidar "src/*.css" -c "make css" \
+	& chokidar "src/*.scss" -c "make css" \
 	& chokidar "src/*.html" -c "make html" \
 	& chokidar "src/assets/*" -c "make assets" \
 
