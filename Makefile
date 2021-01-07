@@ -3,13 +3,14 @@
 MAKEFLAGS += --no-print-directory
 
 .EXPORT_ALL_VARIABLES:
-.PHONY: all start prepare css js build html
 
 PATH := $(PWD)/node_modules/.bin:$(PATH)
 SHELL := /bin/bash
 
 all: clean assets
-	esbuild src/index.js --bundle --minify --define:process.env.NODE_ENV=\"production\" --loader:.js=jsx --outfile=dist/index.js
+	esbuild src/index.js --bundle --minify --define:process.env.NODE_ENV=\"production\" --loader:.js=jsx > tmp/app.bundle.js
+	tsc tmp/app.bundle.js --allowJs --lib DOM,ES2015 --target ES5 --outFile tmp/app.bundle.es5.js
+	uglifyjs tmp/app.bundle.es5.js --toplevel -m -c drop_console=true,passes=3 > dist/index.js
 	sass src/style.scss dist/style.css
 	cleancss dist/style.css -o dist/style.css
 	html-minifier --collapse-whitespace src/index.html -o dist/index.html
@@ -23,7 +24,7 @@ watch: clean js css html assets
 
 clean:
 	rm -rf dist
-	mkdir -p dist/assets
+	mkdir -p {tmp,dist/assets}
 
 html:
 	cp src/index.html dist/index.html
