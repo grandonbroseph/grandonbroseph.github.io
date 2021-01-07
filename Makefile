@@ -9,8 +9,9 @@ PATH := $(PWD)/node_modules/.bin:$(PATH)
 SHELL := /bin/bash
 
 all: clean assets
-	esbuild src/index.js --bundle --minify --outfile=dist/index.js
-	cleancss dist/style.css -o dist/style.css --source-map --source-map-inline-sources
+	esbuild src/index.js --bundle --minify --define:process.env.NODE_ENV=\"production\" --loader:.js=jsx --outfile=dist/index.js
+	sass src/style.scss dist/style.css
+	cleancss dist/style.css -o dist/style.css
 	html-minifier --collapse-whitespace src/index.html -o dist/index.html
 	rm dist/*.map
 
