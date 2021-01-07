@@ -109,6 +109,8 @@ p {
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.125rem;
+  padding-bottom: 0.5rem;
+  border-bottom: thin solid silver;
 }
 
 .project-preview {
@@ -154,6 +156,7 @@ p {
 
 .carousel-image {
   width: 128px;
+  border: 2px solid white;
   outline: thin solid gray;
 }
 
