@@ -6,17 +6,22 @@ Project.propTypes = {
   subtitle: type.string,
   images: type.arrayOf(type.string),
   contents: type.arrayOf(type.string),
-  lifespan: type.arrayOf(type.number)
+  lifespan: type.arrayOf(type.number),
+  side: type.string
 }
 
-export default function Project ({ title, subtitle, lifespan, images, contents }) {
+export default function Project ({ title, subtitle, lifespan, images, contents, side }) {
+  let reverse = false
+  if (side === 'left') {
+    reverse = true
+  }
   const imageidx = 0
   const imagesrc = images[imageidx]
   let lifestr = lifespan[0]
   if (lifespan[1]) {
     lifestr += '-' + lifespan[1]
   }
-  return <div className='project'>
+  return <div className={reverse ? 'project -reverse' : 'project'}>
     <div className='project-content'>
       <div className='project-headings'>
         <h3 className='project-title'>{title}</h3>

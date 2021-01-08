@@ -17,7 +17,8 @@ export default function App () {
       </div>
     </div>
     <div className='projects'>
-      <Project {...projects.tactics} />
+      <Project side='right' {...projects.tactics} />
+      <Project side='left' {...projects.proto} />
     </div>
   </main>
 }
