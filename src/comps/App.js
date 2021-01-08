@@ -1,6 +1,6 @@
 import React from 'react'
-import Project from './comps/Project'
-import * as projects from './projects'
+import Project from './Project'
+import * as projects from '../projects'
 
 export default function App () {
   return <main className='app'>
@@ -17,7 +17,7 @@ export default function App () {
       </div>
     </div>
     <div className='projects'>
-      <Project {...projects.tactics}></Project>
+      <Project {...projects.tactics} />
     </div>
   </main>
 }
