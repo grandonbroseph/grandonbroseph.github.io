@@ -14,18 +14,31 @@ body {
 .app {
   width: 100%;
   height: 100%;
+  padding: 0 8%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .name {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.title {
   font-size: 4rem;
+  font-family: Montserrat;
 }
 
 .socials {
-  margin: 0 3rem;
+  margin-left: 8rem;
 }
 
 .social {
-  margin: 0.25rem;
+  width: 2rem;
+}
+
+.social {
+  margin-left: 1.5rem;
 }
