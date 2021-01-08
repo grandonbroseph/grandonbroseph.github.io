@@ -3,4 +3,6 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 
-ReactDOM.render(<App/>, document.querySelector('main'))
+const root = document.getElementById('app')
+ReactDOM.render(<App/>, root, _ =>
+  root.replaceWith(root.firstChild))
