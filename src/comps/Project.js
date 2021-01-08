@@ -43,6 +43,7 @@ export default function Project ({ title, subtitle, lifespan, images, contents }
     </div>
     <div className='project-imagewrap'>
       <img src={imagesrc} className='project-image' />
+      <img src={imagesrc} className='project-image -refl' />
     </div>
   </div>
 }

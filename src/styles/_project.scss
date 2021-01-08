@@ -3,6 +3,7 @@
   text-align: right;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 3rem 8%;
 }
 
@@ -36,7 +37,7 @@
 .project-lifespan {
   font-size: 1.25rem;
   font-weight: bold;
-  color: gray;
+  color: purple;
 }
 
 .project-carousel {
@@ -49,7 +50,7 @@
 .project-thumb {
   width: 8rem;
   border: 3px solid transparent;
-  outline: 3px solid #666;
+  outline: 3px solid purple;
 }
 
 .project-thumb.-select {
@@ -61,12 +62,34 @@
 }
 
 .project-imagewrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   order: -1;
   margin-right: 3rem;
 }
 
+.project-imagewrap::before {
+  content: '';
+  display: block;
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.5),
+    black 50%);
+  position: absolute;
+  top: 100%;
+  width: calc(100% + 1px);
+  height: 100%;
+  z-index: 1;
+}
+
 .project-image {
   width: 512px;
+}
+
+.project-image.-refl {
+  position: absolute;
+  transform: scaleY(-1);
+  transform-origin: bottom left;
 }
 
 .project-button {
