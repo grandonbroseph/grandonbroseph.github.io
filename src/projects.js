@@ -1,8 +1,9 @@
 export const riderly = {
-  images: ['assets/riderly-00.png'],
+  images: ['assets/riderly-00.png', 'assets/riderly-01.png', 'assets/riderly-02.png'],
   title: 'Riderly',
   subtitle: 'Connecting Transit Riders',
   lifespan: [2020],
+  platform: 'mobile',
   icons: ['firebase.svg', 'figma.svg', 'html.svg', 'css.svg', 'js.svg'],
   contents: [
     'A transit web app for the Metro Vancouver area that crowdsources real-time information related to COVID-19 through chat rooms and user reports.'
@@ -15,6 +16,7 @@ export const tactics = {
   title: 'Taciturn',
   subtitle: 'Tactical RPG Action',
   lifespan: [2018, 2020],
+  platform: 'desktop',
   icons: ['html.svg', 'css.svg', 'js.svg'],
   contents: [
     'In this game, the player faces off against an enemy army in turn-based combat with a variety of unit types at their disposal. The game ends once the commander on either side is defeated.',
@@ -28,6 +30,7 @@ export const proto = {
   title: 'Proto Man',
   subtitle: 'A day in the limelight',
   lifespan: [2014],
+  platform: 'desktop',
   icons: ['python.svg', 'pygame.png'],
   contents: [
     'This project was a clone of the classic Mega Man games for the NES/Famicom. The player jumps and shoots their way through side-scrolling stages, defeating enemies, avoiding hazards, and overcoming bosses.',

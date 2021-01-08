@@ -13,10 +13,13 @@
   z-index: 1;
 }
 
-.project-content {
+.project-contents {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.project-content {
   margin-top: 1.25rem;
 }
 
@@ -91,6 +94,18 @@
   margin-right: 3rem;
 }
 
+.project-imagewrap.-mobile {
+  height: 640px;
+}
+
+.project-imagewrap.-mobile .project-image {
+  height: 100%;
+}
+
+.project-imagewrap.-desktop .project-image {
+  width: 512px;
+}
+
 .project-imagewrap::before {
   content: '';
   display: block;
@@ -103,10 +118,6 @@
   // HACK: image leaks through when zoomed out
   width: calc(100% + 1px);
   height: calc(100% + 1px);
-}
-
-.project-image {
-  width: 512px;
 }
 
 .project-image.-refl {
@@ -148,7 +159,7 @@
   text-align: right;
 }
 
-.project.-reverse .project-content {
+.project.-reverse .project-contents {
   align-items: flex-end;
 }
 

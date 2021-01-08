@@ -7,6 +7,7 @@ Project.propTypes = {
   images: type.arrayOf(type.string),
   contents: type.arrayOf(type.string),
   lifespan: type.arrayOf(type.number),
+  platform: type.string,
   icons: type.arrayOf(type.string),
   link: type.string,
   side: type.string
@@ -24,7 +25,7 @@ export default function Project (project) {
     lifestr += '-' + project.lifespan[1]
   }
   return <div className={reverse ? 'project -reverse' : 'project'}>
-    <div className='project-content'>
+    <div className='project-contents'>
       <div className='project-headings'>
         <h3 className='project-title'>{project.title}</h3>
         <span className='project-subtitle'>{project.subtitle}</span>
@@ -57,7 +58,10 @@ export default function Project (project) {
           </a>
         : null}
     </div>
-    <div className='project-imagewrap'>
+    <div className={
+      project.platform === 'mobile'
+        ? 'project-imagewrap -mobile'
+        : 'project-imagewrap -desktop'}>
       <img src={imagesrc} className='project-image' />
       <img src={imagesrc} className='project-image -refl' />
     </div>
