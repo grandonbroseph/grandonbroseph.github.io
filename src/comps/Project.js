@@ -7,7 +7,8 @@ Project.propTypes = {
   images: type.arrayOf(type.string),
   contents: type.arrayOf(type.string),
   lifespan: type.arrayOf(type.number),
-  link: type.arrayOf(type.string),
+  icons: type.arrayOf(type.string),
+  link: type.string,
   side: type.string
 }
 
@@ -29,6 +30,13 @@ export default function Project (project) {
         <span className='project-subtitle'>{project.subtitle}</span>
         <span className='project-lifespan'>{lifestr}</span>
       </div>
+      <div className='project-icons'>
+        {project.icons && project.icons.length
+          ? project.icons.map((icon, i) =>
+              <img key={i} src={`assets/${icon}.svg`} className='project-icon' />
+            )
+          : null}
+      </div>
       {project.contents.map((content, i) =>
         <p key={i} className='project-content'>{content}</p>
       )}
@@ -45,7 +53,7 @@ export default function Project (project) {
           rel='noreferrer'
           className='project-button'>
             View the demo
-            <span className='project-icon material-icons-round'>arrow_right</span>
+            <span className='project-button-icon material-icons-round'>arrow_right</span>
           </a>
         : null}
     </div>

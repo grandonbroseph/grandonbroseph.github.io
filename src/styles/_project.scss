@@ -46,6 +46,20 @@
   color: white;
 }
 
+.project-icons {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.project-icon + .project-icon {
+  margin-left: 0.25rem;
+}
+
+.project-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
 .project-carousel {
   display: flex;
   justify-content: flex-end;
@@ -113,7 +127,7 @@
   position: relative;
 }
 
-.project-icon {
+.project-button-icon {
   margin-left: 0.25rem;
 }
 

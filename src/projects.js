@@ -4,6 +4,7 @@ export const riderly = {
   subtitle: 'Connecting Transit Riders',
   platform: 'web',
   lifespan: [2020],
+  icons: ['html5', 'firebase', 'figma'],
   contents: [
     'A transit web app for the Metro Vancouver area that crowdsources real-time information related to COVID-19 through chat rooms and user reports.'
   ],
@@ -11,11 +12,12 @@ export const riderly = {
 }
 
 export const tactics = {
-  images: ['assets/tactics-00.png', 'assets/tactics-01.png'],
+  images: ['assets/tactics-00.png', 'assets/tactics-01.png', 'assets/tactics-02.png'],
   title: 'Taciturn',
   subtitle: 'Tactical RPG Action',
   platform: 'web',
   lifespan: [2018, 2020],
+  icons: ['html5'],
   contents: [
     'In this game, the player faces off against an enemy army in turn-based combat with a variety of unit types at their disposal. The game ends once the commander on either side is defeated.',
     'This project was one of my first forays into integrating complex UI mockups into a game. I learned to design my own game mechanics and develop and manage state-heavy, animation-driven applications.'
@@ -29,6 +31,7 @@ export const proto = {
   subtitle: 'A day in the limelight',
   platform: 'python',
   lifespan: [2014],
+  icons: [],
   contents: [
     'This project was a clone of the classic Mega Man games for the NES/Famicom. The player jumps and shoots their way through side-scrolling stages, defeating enemies, avoiding hazards, and overcoming bosses.',
     'Over the course of this project, I had the opportunity to design characters and custom sprites to fit an established aesthetic both visually and mechanically and use music I wrote inside a game. I also discovered ways to mimic VFX and audio channel limitations as they might occur on the original hardware.'
