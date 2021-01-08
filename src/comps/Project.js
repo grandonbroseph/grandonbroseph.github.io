@@ -33,7 +33,7 @@ export default function Project (project) {
       <div className='project-icons'>
         {project.icons && project.icons.length
           ? project.icons.map((icon, i) =>
-              <img key={i} src={`assets/${icon}.svg`} className='project-icon' />
+              <img key={i} src={`assets/${icon}`} className='project-icon' />
             )
           : null}
       </div>
