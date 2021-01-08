@@ -1,0 +1,43 @@
+.project {
+  background: white;
+  color: black;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 8%;
+}
+
+.project-headings {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  font-size: 4rem;
+  line-height: 1.125;
+}
+
+.project-subtitle {
+  color: indigo;
+  order: -1;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+.project-lifespan {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: gray;
+}
+
+.project-imagewrap {
+  order: -1;
+  margin-right: 3rem;
+}
+
+.project-image {
+  width: 512px;
+}
