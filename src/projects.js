@@ -7,7 +7,8 @@ export const tactics = {
   contents: [
     'In this game, the player faces off against an enemy army in turn-based combat with a variety of unit types at their disposal. The game ends once the commander on either side is defeated.',
     'This project was one of my first forays into integrating complex UI mockups into a game. I learned to design my own game mechanics and develop and manage state-heavy, animation-driven applications.'
-  ]
+  ],
+  link: 'https://semibran.github.io/tactics-new'
 }
 
 export const proto = {

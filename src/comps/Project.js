@@ -7,44 +7,47 @@ Project.propTypes = {
   images: type.arrayOf(type.string),
   contents: type.arrayOf(type.string),
   lifespan: type.arrayOf(type.number),
+  link: type.arrayOf(type.string),
   side: type.string
 }
 
-export default function Project ({ title, subtitle, lifespan, images, contents, side }) {
+export default function Project (project) {
   let reverse = false
-  if (side === 'left') {
+  if (project.side === 'left') {
     reverse = true
   }
   const imageidx = 0
-  const imagesrc = images[imageidx]
-  let lifestr = lifespan[0]
-  if (lifespan[1]) {
-    lifestr += '-' + lifespan[1]
+  const imagesrc = project.images[imageidx]
+  let lifestr = project.lifespan[0]
+  if (project.lifespan[1]) {
+    lifestr += '-' + project.lifespan[1]
   }
   return <div className={reverse ? 'project -reverse' : 'project'}>
     <div className='project-content'>
       <div className='project-headings'>
-        <h3 className='project-title'>{title}</h3>
-        <span className='project-subtitle'>{subtitle}</span>
+        <h3 className='project-title'>{project.title}</h3>
+        <span className='project-subtitle'>{project.subtitle}</span>
         <span className='project-lifespan'>{lifestr}</span>
       </div>
-      {contents.map((content, i) =>
+      {project.contents.map((content, i) =>
         <p key={i} className='project-content'>{content}</p>
       )}
       <div className='project-carousel'>
-        {images.map((src, i) =>
+        {project.images.map((src, i) =>
           i === imageidx
             ? <img src={src} key={i} className='project-thumb -select'/>
             : <img src={src} key={i} className='project-thumb'/>
         )}
       </div>
-      <a href='https://semibran.github.io/tactics-new'
-      target='_blank'
-      rel='noreferrer'
-      className='project-button'>
-        View the demo
-        <span className='project-icon material-icons-round'>arrow_right</span>
-      </a>
+      {project.link
+        ? <a href={project.link}
+          target='_blank'
+          rel='noreferrer'
+          className='project-button'>
+            View the demo
+            <span className='project-icon material-icons-round'>arrow_right</span>
+          </a>
+        : null}
     </div>
     <div className='project-imagewrap'>
       <img src={imagesrc} className='project-image' />
