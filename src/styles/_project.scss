@@ -1,5 +1,6 @@
 .projects {
   background: black;
+  overflow-y: hidden;
 }
 
 .project {
@@ -79,7 +80,7 @@
   content: '';
   display: block;
   background: linear-gradient(to bottom,
-    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.75),
     black 50%);
   position: absolute;
   top: 100%;
@@ -144,8 +145,4 @@
 
 .project + .project {
   margin-top: 4rem;
-}
-
-.project:last-child {
-  padding-bottom: 20rem;
 }
