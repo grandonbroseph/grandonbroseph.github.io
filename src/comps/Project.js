@@ -26,6 +26,20 @@ export default function Project ({ title, subtitle, lifespan, images, contents }
       {contents.map((content, i) =>
         <p key={i} className='project-content'>{content}</p>
       )}
+      <div className='project-carousel'>
+        {images.map((src, i) =>
+          i === imageidx
+            ? <img src={src} key={i} className='project-thumb -select'/>
+            : <img src={src} key={i} className='project-thumb'/>
+        )}
+      </div>
+      <a href='https://semibran.github.io/tactics-new'
+      target='_blank'
+      rel='noreferrer'
+      className='project-button'>
+        View the demo
+        <span className='project-icon material-icons-round'>arrow_right</span>
+      </a>
     </div>
     <div className='project-imagewrap'>
       <img src={imagesrc} className='project-image' />

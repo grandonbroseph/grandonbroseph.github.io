@@ -1,10 +1,15 @@
 .project {
-  background: white;
-  color: black;
+  background: black;
   text-align: right;
   display: flex;
   justify-content: space-between;
   padding: 3rem 8%;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .project-headings {
@@ -19,7 +24,7 @@
 }
 
 .project-subtitle {
-  color: indigo;
+  color: cyan;
   order: -1;
   font-size: 1.25rem;
   font-weight: bold;
@@ -33,6 +38,27 @@
   color: gray;
 }
 
+.project-carousel {
+  display: flex;
+  justify-content: flex-end;
+  order: -1;
+  margin-bottom: 2rem;
+}
+
+.project-thumb {
+  width: 8rem;
+  border: 3px solid transparent;
+  outline: 3px solid #666;
+}
+
+.project-thumb.-select {
+  outline: 3px solid cyan;
+}
+
+.project-thumb + .project-thumb {
+  margin-left: 1rem;
+}
+
 .project-imagewrap {
   order: -1;
   margin-right: 3rem;
@@ -40,4 +66,32 @@
 
 .project-image {
   width: 512px;
+}
+
+.project-button {
+  padding: 1rem 2rem;
+  padding-right: 1.25rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  background: cyan;
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+
+.project-icon {
+  margin-left: 0.25rem;
+}
+
+// triangle
+.project-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 8px solid transparent;
+  border-top-color: black;
+  border-left-color: black;
 }
