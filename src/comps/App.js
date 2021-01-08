@@ -8,7 +8,7 @@ export default function App () {
       <div className='headings'>
         <h1 className='name'>Brandon Semilla</h1>
         <h2 className='title'>Web Developer</h2>
-        <h2 className='title'>+ Game Designer</h2>
+        <h2 className='subtitle'>+ Game Designer</h2>
       </div>
       <div className='socials'>
         <img className='social -github' src='../assets/github.svg' />
@@ -17,8 +17,9 @@ export default function App () {
       </div>
     </div>
     <div className='projects'>
-      <Project side='right' {...projects.tactics} />
-      <Project side='left' {...projects.proto} />
+      <Project side='right' {...projects.riderly} />
+      <Project side='left' {...projects.tactics} />
+      <Project side='right' {...projects.proto} />
     </div>
   </main>
 }

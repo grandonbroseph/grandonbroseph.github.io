@@ -1,3 +1,15 @@
+export const riderly = {
+  images: ['assets/riderly-00.png'],
+  title: 'Riderly',
+  subtitle: 'Connecting Transit Riders',
+  platform: 'web',
+  lifespan: [2020],
+  contents: [
+    'A transit web app for the Metro Vancouver area that crowdsources real-time information related to COVID-19 through chat rooms and user reports.'
+  ],
+  link: 'https://riderly-1800.web.app'
+}
+
 export const tactics = {
   images: ['assets/tactics-00.png', 'assets/tactics-01.png'],
   title: 'Taciturn',

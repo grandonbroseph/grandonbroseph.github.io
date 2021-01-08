@@ -28,11 +28,11 @@
 .project-title {
   font-size: 4rem;
   line-height: 1.125;
-  text-shadow: 4px 4px black, 8px 8px indigo;
+  text-shadow: 4px 4px $color-two;
 }
 
 .project-subtitle {
-  color: cyan;
+  color: $color-one;
   order: -1;
   font-size: 1.25rem;
   font-weight: bold;
@@ -56,11 +56,11 @@
 .project-thumb {
   width: 8rem;
   border: 3px solid transparent;
-  outline: 3px solid indigo;
+  outline: 3px solid $color-onedark;
 }
 
 .project-thumb.-select {
-  outline: 3px solid cyan;
+  outline: 3px solid $color-one;
 }
 
 .project-thumb + .project-thumb {
@@ -101,9 +101,9 @@
 }
 
 .project-button {
-  background: cyan;
+  background: linear-gradient(to bottom right, $color-one, $color-two);
   color: black;
-  box-shadow: 4px 4px black, 8px 8px indigo;
+  box-shadow: 4px 4px black, 8px 8px $color-two;
   padding: 1rem 2rem;
   padding-right: 1.25rem;
   margin-top: 2rem;
