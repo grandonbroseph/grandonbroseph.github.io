@@ -5,10 +5,11 @@ Project.propTypes = {
   title: type.string,
   subtitle: type.string,
   images: type.arrayOf(type.string),
-  contents: type.arrayOf(type.string),
   lifespan: type.arrayOf(type.number),
-  platform: type.string,
+  contents: type.arrayOf(type.string),
+  takeaways: type.arrayOf(type.string),
   icons: type.arrayOf(type.string),
+  platform: type.string,
   link: type.string,
   side: type.string
 }
@@ -34,7 +35,7 @@ export default function Project (project) {
       <div className='project-icons'>
         {project.icons && project.icons.length
           ? project.icons.map((icon, i) =>
-              <img key={i} src={`assets/${icon}`} className='project-icon' />
+              <img key={i} src={`assets/icon-${icon}`} className='project-icon' />
             )
           : null}
       </div>

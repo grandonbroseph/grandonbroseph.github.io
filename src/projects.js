@@ -4,9 +4,9 @@ export const riderly = {
   subtitle: 'Connecting Transit Riders',
   lifespan: ['Sep 2020-Dec 2020'],
   platform: 'mobile',
-  icons: ['firebase.svg', 'figma.svg', 'html.svg', 'css.svg', 'js.svg'],
+  icons: ['firebase.svg', 'figma.svg', 'js.svg', 'css.svg', 'html.svg', 'nodejs.svg'],
   contents: [
-    'A transit web app for the Metro Vancouver area that crowdsources real-time information related to COVID-19 through chat rooms and user reports.'
+    'A transit web app for the Metro Vancouver area that crowdsources real-time information related to COVID-19 via chat rooms and user reports.'
   ],
   link: 'https://riderly-1800.web.app'
 }
@@ -17,9 +17,13 @@ export const mineteria = {
   subtitle: 'Minecraft Social Network',
   lifespan: ['Nov 2019', 'May 2020'],
   platform: 'desktop',
-  icons: ['figma.svg', 'html.svg', 'css.svg', 'js.svg'],
+  icons: ['react.svg', 'figma.svg', 'html.svg', 'css.svg', 'js.svg'],
   contents: [
     'An online marketplace for Mineteria, the world\'s most exciting Minecraft social network.'
+  ],
+  takeaways: [
+    'Developed front end single-page application in React',
+    'Translated Figma designs into a web application and designed additional responsive layouts'
   ],
   link: 'https://shop.mineteria.com'
 }

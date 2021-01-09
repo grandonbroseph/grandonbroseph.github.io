@@ -32,7 +32,6 @@
 .project-title {
   font-size: 4rem;
   line-height: 1.125;
-  text-shadow: 4px 4px $color-two;
 }
 
 .project-subtitle {
@@ -127,9 +126,8 @@
 }
 
 .project-button {
-  background: linear-gradient(to bottom right, $color-one, $color-two);
+  background: $color-one;
   color: black;
-  box-shadow: 4px 4px black, 8px 8px $color-two;
   padding: 1rem 2rem;
   padding-right: 1.25rem;
   margin-top: 2rem;
