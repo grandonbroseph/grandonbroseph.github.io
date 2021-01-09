@@ -14,12 +14,15 @@ export default function App () {
         <img className='social -github' src='../assets/github.svg' />
         <img className='social -linkedin' src='../assets/linkedin.svg' />
         <img className='social -instagram' src='../assets/instagram.svg' />
+        <img className='social -twitter' src='../assets/twitter.svg' />
+        <img className='social -soundcloud' src='../assets/soundcloud.svg' />
       </div>
     </div>
     <div className='projects'>
       <Project side='right' {...projects.riderly} />
-      <Project side='left' {...projects.tactics} />
-      <Project side='right' {...projects.proto} />
+      <Project side='left' {...projects.mineteria} />
+      <Project side='right' {...projects.tactics} />
+      <Project side='left' {...projects.proto} />
     </div>
   </main>
 }

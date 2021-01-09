@@ -11,6 +11,19 @@ export const riderly = {
   link: 'https://riderly-1800.web.app'
 }
 
+export const mineteria = {
+  images: ['assets/mineteria-00.png', 'assets/mineteria-01.png', 'assets/mineteria-02.png'],
+  title: 'Mineteria',
+  subtitle: 'Minecraft Social Network',
+  lifespan: [2019, 2020],
+  platform: 'desktop',
+  icons: ['figma.svg', 'html.svg', 'css.svg', 'js.svg'],
+  contents: [
+    'An online marketplace for Mineteria, the world\'s most exciting Minecraft social network.'
+  ],
+  link: 'https://shop.mineteria.com'
+}
+
 export const tactics = {
   images: ['assets/tactics-00.png', 'assets/tactics-01.png', 'assets/tactics-02.png'],
   title: 'Taciturn',
