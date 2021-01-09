@@ -2,7 +2,7 @@ export const riderly = {
   images: ['assets/riderly-00.png', 'assets/riderly-01.png', 'assets/riderly-02.png'],
   title: 'Riderly',
   subtitle: 'Connecting Transit Riders',
-  lifespan: [2020],
+  lifespan: ['Sep 2020-Dec 2020'],
   platform: 'mobile',
   icons: ['firebase.svg', 'figma.svg', 'html.svg', 'css.svg', 'js.svg'],
   contents: [
@@ -15,7 +15,7 @@ export const mineteria = {
   images: ['assets/mineteria-00.png', 'assets/mineteria-01.png', 'assets/mineteria-02.png'],
   title: 'Mineteria',
   subtitle: 'Minecraft Social Network',
-  lifespan: [2019, 2020],
+  lifespan: ['Nov 2019', 'May 2020'],
   platform: 'desktop',
   icons: ['figma.svg', 'html.svg', 'css.svg', 'js.svg'],
   contents: [
@@ -28,7 +28,7 @@ export const tactics = {
   images: ['assets/tactics-00.png', 'assets/tactics-01.png', 'assets/tactics-02.png'],
   title: 'Taciturn',
   subtitle: 'Tactical RPG Action',
-  lifespan: [2018, 2020],
+  lifespan: ['Apr 2018', 'Nov 2020'],
   platform: 'desktop',
   icons: ['html.svg', 'css.svg', 'js.svg'],
   contents: [
@@ -42,7 +42,7 @@ export const proto = {
   images: ['assets/proto-00.png', 'assets/proto-02.png', 'assets/proto-03.png'],
   title: 'Proto Man',
   subtitle: 'A day in the limelight',
-  lifespan: [2014],
+  lifespan: ['Dec 2014'],
   platform: 'desktop',
   icons: ['python.svg', 'pygame.png'],
   contents: [
