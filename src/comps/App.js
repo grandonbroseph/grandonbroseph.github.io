@@ -7,9 +7,10 @@ export default function App () {
 
   function toggleMenu () {
     setMenu(!menu)
+    document.body.classList.toggle('-slide')
   }
 
-  return <main className={menu ? 'app -menu' : 'app'}>
+  return <main className='app'>
     <div className='screen'>
       <button onClick={toggleMenu} className='nav-toggle material-icons-round'>
         {menu ? 'close' : 'menu'}
