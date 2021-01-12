@@ -11,13 +11,35 @@ $nav-width: 160px;
 body {
   color: white;
   font-family: $font-content;
+}
+
+.page {
   position: relative;
   transition: 0.25s right;
   right: 0;
 }
 
-body.-slide {
+.page.-slide {
   right: $nav-width;
+}
+
+.page::before {
+  content: '';
+  display: block;
+  background: black;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: 0.25s opacity;
+}
+
+.page.-slide::before {
+  opacity: 0.5;
 }
 
 .screen {
