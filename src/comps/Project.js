@@ -6,7 +6,7 @@ Project.propTypes = {
   title: type.string,
   subtitle: type.string,
   images: type.arrayOf(type.string),
-  lifespan: type.arrayOf(type.number),
+  lifespan: type.arrayOf(type.string),
   contents: type.arrayOf(type.string),
   takeaways: type.arrayOf(type.string),
   icons: type.arrayOf(type.string),
