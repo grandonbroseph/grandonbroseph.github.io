@@ -16,7 +16,7 @@ all: clean assets
 	html-minifier --collapse-whitespace src/index.html -o dist/index.html
 	rm dist/*.map
 
-watch: clean js css html assets
+start: clean js css html assets
 	chokidar "src/**/*.js" -c "make js" \
 	& chokidar "src/**/*.scss" -c "make css" \
 	& chokidar "src/*.html" -c "make html" \

@@ -1,5 +1,6 @@
 import React from 'react'
 import type from 'prop-types'
+import icons from '../icons'
 
 Project.propTypes = {
   title: type.string,
@@ -34,8 +35,8 @@ export default function Project (project) {
       </div>
       <div className='project-icons'>
         {project.icons && project.icons.length
-          ? project.icons.map((icon, i) =>
-              <img key={i} src={`assets/icon-${icon}`} className='project-icon' />
+          ? project.icons.map((iconId, i) =>
+              <img key={i} src={`assets/${icons[iconId]}`} className='project-icon' />
             )
           : null}
       </div>

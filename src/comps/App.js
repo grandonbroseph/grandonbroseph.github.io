@@ -11,11 +11,8 @@ export default function App () {
         <h2 className='subtitle'>+ Game Designer</h2>
       </div>
       <div className='socials'>
-        <img className='social -github' src='../assets/github.svg' />
-        <img className='social -linkedin' src='../assets/linkedin.svg' />
-        <img className='social -instagram' src='../assets/instagram.svg' />
-        <img className='social -twitter' src='../assets/twitter.svg' />
-        <img className='social -soundcloud' src='../assets/soundcloud.svg' />
+        <img className='social -github' src='../assets/icon-github.svg' />
+        <img className='social -linkedin' src='../assets/icon-linkedin.svg' />
       </div>
     </div>
     <div className='projects'>

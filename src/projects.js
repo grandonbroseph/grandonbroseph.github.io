@@ -4,7 +4,7 @@ export const riderly = {
   subtitle: 'Connecting Transit Riders',
   lifespan: ['Sep 2020-Dec 2020'],
   platform: 'mobile',
-  icons: ['firebase.svg', 'figma.svg', 'js.svg', 'css.svg', 'html.svg', 'nodejs.svg'],
+  icons: ['firebase', 'figma', 'js', 'css', 'html', 'nodejs'],
   contents: [
     'A transit web app for the Metro Vancouver area that crowdsources real-time information related to COVID-19 via chat rooms and user reports.'
   ],
@@ -17,7 +17,7 @@ export const mineteria = {
   subtitle: 'Minecraft Social Network',
   lifespan: ['Nov 2019', 'May 2020'],
   platform: 'desktop',
-  icons: ['react.svg', 'figma.svg', 'html.svg', 'css.svg', 'js.svg'],
+  icons: ['react', 'figma', 'html', 'css', 'js'],
   contents: [
     'An online marketplace for Mineteria, the world\'s most exciting Minecraft social network.'
   ],
@@ -34,7 +34,7 @@ export const tactics = {
   subtitle: 'Tactical RPG Action',
   lifespan: ['Apr 2018', 'Nov 2020'],
   platform: 'desktop',
-  icons: ['html.svg', 'css.svg', 'js.svg'],
+  icons: ['html', 'css', 'js'],
   contents: [
     'In this game, the player faces off against an enemy army in turn-based combat with a variety of unit types at their disposal. The game ends once the commander on either side is defeated.',
     'This project was one of my first forays into integrating complex UI mockups into a game. I learned to design my own game mechanics and develop and manage state-heavy, animation-driven applications.'
@@ -48,7 +48,7 @@ export const proto = {
   subtitle: 'A day in the limelight',
   lifespan: ['Dec 2014'],
   platform: 'desktop',
-  icons: ['python.svg', 'pygame.png'],
+  icons: ['python', 'pygame'],
   contents: [
     'This project was a clone of the classic Mega Man games for the NES/Famicom. The player jumps and shoots their way through side-scrolling stages, defeating enemies, avoiding hazards, and overcoming bosses.',
     'Over the course of this project, I had the opportunity to design characters and custom sprites to fit an established aesthetic both visually and mechanically and use music I wrote inside a game. I also discovered ways to mimic VFX and audio channel limitations as they might occur on the original hardware.'
