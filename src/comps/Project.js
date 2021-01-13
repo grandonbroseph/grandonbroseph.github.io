@@ -55,11 +55,11 @@ export default function Project (project) {
         )}
       </div>
       {project.link
-        ? <a href={project.link}
+        ? <a href={project.link.href}
           target='_blank'
           rel='noreferrer'
           className='project-button'>
-            View the demo
+            {project.link.text}
             <span className='project-button-icon material-icons-round'>chevron_right</span>
           </a>
         : null}

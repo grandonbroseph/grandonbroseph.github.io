@@ -8,11 +8,14 @@ export const lifeos = {
   contents: [
     'A Chrome extension with a Pomodoro timer and audio integrations like ambience, binaural beats, and Spotify to boost mindfulness and productivity.'
   ],
-  link: 'https://github.com/semibran/lifeos'
+  link: {
+    text: 'View the source',
+    href: 'https://github.com/semibran/lifeos'
+  }
 }
 
 export const riderly = {
-  images: ['assets/riderly-00.png', 'assets/riderly-01.png', 'assets/riderly-02.png'],
+  images: ['assets/riderly-01.png', 'assets/riderly-02.png', 'assets/riderly-00.png'],
   title: 'Riderly',
   subtitle: 'Connecting Transit Riders',
   lifespan: ['2020'],
@@ -22,7 +25,10 @@ export const riderly = {
   contents: [
     'A transit web app for the Metro Vancouver area that crowdsources real-time information related to COVID-19 via chat rooms and user reports.'
   ],
-  link: 'https://riderly-1800.web.app'
+  link: {
+    text: 'View it live',
+    href: 'https://riderly-1800.web.app'
+  }
 }
 
 export const mineteria = {
@@ -40,7 +46,10 @@ export const mineteria = {
     'Developed front end single-page application in React',
     'Translated Figma designs into a web application and designed additional responsive layouts'
   ],
-  link: 'https://shop.mineteria.com'
+  link: {
+    text: 'View it live',
+    href: 'https://shop.mineteria.com'
+  }
 }
 
 export const tactics = {
@@ -51,10 +60,12 @@ export const tactics = {
   platform: 'desktop',
   icons: ['html', 'css', 'js'],
   contents: [
-    'In this game, the player faces off against an enemy army in turn-based combat with a variety of unit types at their disposal. The game ends once the commander on either side is defeated.',
-    'This project was one of my first forays into integrating complex UI mockups into a game. I learned to design my own game mechanics and develop and manage state-heavy, animation-driven applications.'
+    'A board game-style strategy game based around perfect information and deterministic combat.'
   ],
-  link: 'https://semibran.github.io/tactics-new'
+  link: {
+    text: 'Play the demo',
+    href: 'https://semibran.github.io/tactics-new'
+  }
 }
 
 export const proto = {
@@ -65,7 +76,10 @@ export const proto = {
   platform: 'desktop',
   icons: ['python', 'pygame'],
   contents: [
-    'This project was a clone of the classic Mega Man games for the NES/Famicom. The player jumps and shoots their way through side-scrolling stages, defeating enemies, avoiding hazards, and overcoming bosses.',
-    'Over the course of this project, I had the opportunity to design characters and custom sprites to fit an established aesthetic both visually and mechanically and use music I wrote inside a game. I also discovered ways to mimic VFX and audio channel limitations as they might occur on the original hardware.'
-  ]
+    'A clone of the classic Mega Man games for the original Nintendo Entertainment System.'
+  ],
+  link: {
+    text: 'View the source',
+    href: 'https://github.com/semibran/proto-man'
+  }
 }
