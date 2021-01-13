@@ -51,20 +51,21 @@ export default function App () {
       <div className='hero' id='hero'>
         <div className='headings'>
           <h1 className='name'>Brandon <strong>Semilla</strong></h1>
-          <h2 className='title'>Web Developer</h2>
-          <h2 className='subtitle'>+ Game Designer</h2>
-          <div className='socials'>
-            <div className='social'>
-              <img className='social-icon -github' src='../assets/icon-github.svg' />
-            </div>
-            <div className='social'>
-              <img className='social-icon -linkedin' src='../assets/icon-linkedin.svg' />
-            </div>
-            <div className='social'>
-              <span className='social-icon material-icons-round'>mail</span>
-            </div>
+          <div className='titles'>
+            <h2 className='title'>Web Developer</h2>
+            <h2 className='subtitle'> + Game Designer</h2>
           </div>
-          {/* <button className='button'>View projects</button> */}
+        </div>
+        <div className='socials'>
+          <div className='social'>
+            <img className='social-icon -github' src='../assets/icon-github.svg' />
+          </div>
+          <div className='social'>
+            <img className='social-icon -linkedin' src='../assets/icon-linkedin.svg' />
+          </div>
+          <div className='social'>
+            <span className='social-icon material-icons-round'>mail</span>
+          </div>
         </div>
       </div>
       <section className='section -about'>
@@ -80,11 +81,8 @@ export default function App () {
       <section className='section -projects'>
         <h3 className='section-title'>Projects</h3>
         <div className='projects'>
-          <Project side='left' {...projects.lifeos} />
-          <Project side='right' {...projects.riderly} />
-          <Project side='left' {...projects.mineteria} />
-          <Project side='right' {...projects.tactics} />
-          <Project side='left' {...projects.proto} />
+          {projects.sequence.map((project, i) =>
+            <Project key={i} {...project} />)}
         </div>
         <em className='section-addendum'>
           Find more projects on <a

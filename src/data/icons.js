@@ -13,7 +13,9 @@ export default {
   pygame: 'icon-pygame.png',
   python: 'icon-python.svg',
   react: 'icon-react.svg',
+  socketio: 'icon-socketio.svg',
   soundcloud: 'icon-soundcloud.svg',
   spotify: 'icon-spotify.svg',
-  twitter: 'icon-twitter.svg'
+  twitter: 'icon-twitter.svg',
+  vue: 'icon-vue.svg'
 }

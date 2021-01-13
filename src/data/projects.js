@@ -1,8 +1,8 @@
 export const lifeos = {
   images: ['assets/lifeos-00.png'],
   title: 'LifeOS',
-  lifespan: [],
-  context: 'nwHacks 2021',
+  lifespan: ['2021'],
+  context: 'nwHacks',
   platform: 'mobile',
   icons: ['mithril', 'chrome', 'spotify'],
   contents: [
@@ -68,6 +68,21 @@ export const tactics = {
   }
 }
 
+export const connectFour = {
+  images: ['assets/connect-four.png'],
+  title: 'Connect Four',
+  lifespan: ['2016'],
+  platform: 'mobile',
+  icons: ['vue', 'nodejs', 'socketio'],
+  contents: [
+    'A Connect Four game with a CPU opponent as well as local and online multiplayer.'
+  ],
+  link: {
+    text: 'View the demo',
+    href: 'https://semibran.github.io/connect-four'
+  }
+}
+
 export const proto = {
   images: ['assets/proto-02.png', 'assets/proto-00.png', 'assets/proto-03.png'],
   title: 'Proto Man',
@@ -83,3 +98,12 @@ export const proto = {
     href: 'https://github.com/semibran/proto-man'
   }
 }
+
+export const sequence = [
+  lifeos,
+  riderly,
+  mineteria,
+  tactics,
+  connectFour,
+  proto
+]
