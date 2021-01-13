@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Project from './Project'
-import * as projects from '../projects'
+import * as projects from '../data/projects'
 
 export default function App () {
   const [menu, setMenu] = useState(false)
@@ -50,8 +50,8 @@ export default function App () {
       <section className='section -about'>
         <h3 className='section-title'>About</h3>
         <div className='picture'></div>
-        <p>Hi, I'm Brandon! I'm a front-end web developer and designer. I'm passionate about UI/UX design and making applications simpler, more accessible, and more effective.</p>
-        <p>On the side, I enjoy experimenting with new tech and homebrewing build tools, libraries, and frameworks to optimize efficiency and scalability in my own code. I'm also a hobbyist game developer and digital artist.</p>
+        <p>Hi, I&apos;m Brandon! I&apos;m a front-end web developer and designer. I&apos;m passionate about UI/UX design and making applications simpler, more accessible, and more effective to the people who need them most.</p>
+        <p>Currently, I&apos;m a second-term Computer Systems Technology (CST) student at BCIT in search of an entry-level co-op position. Need someone to build and maintain a website for the 21st century? Let&apos;s get in touch!</p>
         <button className='button'>
           Download résumé
           <span className='icon -padded material-icons-round'>download</span>
@@ -64,7 +64,21 @@ export default function App () {
         <Project side='left' {...projects.mineteria} />
         <Project side='right' {...projects.tactics} />
         <Project side='left' {...projects.proto} />
+        <em className='section-addendum'>
+          Find more projects on <a
+             href='https://github.com/semibran'
+             target='_blank'
+             rel='noreferrer'>GitHub</a>
+        </em>
       </section>
+      <footer className='footer'>
+        <span>
+          &copy;{new Date().getFullYear()} Brandon Semilla
+           · <a href='https://opensource.org/licenses/MIT'
+                target='_blank'
+                rel='noreferrer'>MIT</a>
+        </span>
+      </footer>
     </div>
   </main>
 }

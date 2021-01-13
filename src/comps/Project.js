@@ -1,6 +1,6 @@
 import React from 'react'
 import type from 'prop-types'
-import icons from '../icons'
+import icons from '../data/icons'
 
 Project.propTypes = {
   title: type.string,

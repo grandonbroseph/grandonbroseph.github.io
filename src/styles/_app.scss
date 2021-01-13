@@ -1,5 +1,5 @@
 $color-one: #1FF1B2;
-$color-two: #09c;
+$color-two: #39f;
 $silver: #cde;
 $gray: #999;
 $charcoal: #333;
@@ -12,8 +12,12 @@ body {
   font-family: $font-content;
 }
 
-p {
+p, a, em, strong, span, button {
   letter-spacing: 0.05rem;
+}
+
+a {
+  color: $color-one;
 }
 
 .page {
@@ -46,7 +50,7 @@ p {
 }
 
 .hero {
-  background: linear-gradient(to top left, $color-one, $color-two);
+  background: linear-gradient(to top left, $color-one, #3cf, $color-two);
   width: 100%;
   height: calc(100vh - 3rem);
   padding: 0 8%;
@@ -67,7 +71,8 @@ p {
 
 .name {
   font-size: 3rem;
-  font-family: $font-display;
+  font-family: $font-content;
+  font-weight: normal;
   line-height: 1;
 }
 
@@ -119,9 +124,10 @@ p {
 }
 
 .nav-link {
+  color: white;
+  border-bottom: thin solid $charcoal;
   padding: 0.5rem;
   display: block;
-  border-bottom: thin solid $charcoal;
 }
 
 .socials {
@@ -159,6 +165,8 @@ p {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  box-shadow: 0 0 0 3px white,
+    0 0 0 6px $color-one;
 }
 
 .picture::after {
@@ -233,4 +241,14 @@ p {
 
 .button .icon.-padded {
   margin-left: 4px;
+}
+
+.section-addendum {
+  margin-top: 1rem;
+}
+
+.footer {
+  text-align: center;
+  background: black;
+  padding: 1rem 0;
 }
