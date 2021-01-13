@@ -60,11 +60,26 @@ export const tactics = {
   platform: 'desktop',
   icons: ['html', 'css', 'js'],
   contents: [
-    'A tabletop-style strategy game built around fixed unit interactions, perfect information, and deterministic combat.'
+    'A tabletop-style, minimalistic strategy game built around fixed unit interactions, perfect information, and deterministic combat.'
   ],
   link: {
     text: 'Play the demo',
     href: 'https://semibran.github.io/tactics-new'
+  }
+}
+
+export const tetris = {
+  images: ['assets/tetris.png'],
+  title: 'Tetris',
+  lifespan: ['2017'],
+  platform: 'desktop',
+  icons: ['html', 'css', 'js'],
+  contents: [
+    'A Tetris clone with an emphasis on animations and smooth motion.'
+  ],
+  link: {
+    text: 'Play the demo',
+    href: 'https://semibran.github.io/tetris'
   }
 }
 
@@ -80,6 +95,21 @@ export const connectFour = {
   link: {
     text: 'View the demo',
     href: 'https://semibran.github.io/connect-four'
+  }
+}
+
+export const roguelike = {
+  images: ['assets/roguelike.png'],
+  title: 'Roguelike',
+  lifespan: ['2015'],
+  platform: 'desktop',
+  icons: ['html', 'css', 'js'],
+  contents: [
+    'A text-based roguelike dungeon generator with 3D perspective. Includes animations and FOV raycasting.'
+  ],
+  link: {
+    text: 'Play the demo',
+    href: 'https://codepen.io/semibran/full/yyGMOp'
   }
 }
 
@@ -105,5 +135,6 @@ export const sequence = [
   mineteria,
   tactics,
   connectFour,
+  roguelike,
   proto
 ]
