@@ -7,7 +7,7 @@ MAKEFLAGS += --no-print-directory
 PATH := $(PWD)/node_modules/.bin:$(PATH)
 SHELL := /bin/bash
 
-all: clean assets fonts
+all: clean assets
 	esbuild src/main.js --bundle --minify --define:process.env.NODE_ENV=\"production\" --loader:.js=jsx > tmp/main.bundle.js
 	tsc tmp/app.bundle.js --allowJs --lib DOM,ES2015 --target ES5 --outFile tmp/main.bundle.es5.js
 	uglifyjs tmp/main.bundle.es5.js --toplevel -m -c drop_console=true,passes=3 > dist/main.js
@@ -16,7 +16,7 @@ all: clean assets fonts
 	html-minifier --collapse-whitespace src/index.html -o dist/index.html
 	rm dist/*.map
 
-start: clean js css html assets fonts
+start: clean js css html assets
 	chokidar "src/**/*.js" -c "make js" \
 	& chokidar "src/**/*.scss" -c "make css" \
 	& chokidar "src/*.html" -c "make html" \
@@ -24,7 +24,7 @@ start: clean js css html assets fonts
 
 clean:
 	rm -rf dist
-	mkdir -p {tmp,dist/assets,dist/fonts}
+	mkdir -p {tmp,dist/assets}
 
 html:
 	cp src/index.html dist/index.html
@@ -37,6 +37,3 @@ js:
 
 assets:
 	cp src/assets/* dist/assets
-
-fonts:
-	cp src/fonts/* dist/fonts

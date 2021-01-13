@@ -107,6 +107,11 @@ a {
   padding: 1.25rem;
   z-index: 1;
   outline: 0;
+  background: transparent;
+  transition: 0.25s background;
+}
+
+.nav-toggle.-filled {
   background: black;
 }
 
@@ -122,12 +127,21 @@ a {
   z-index: -2;
 }
 
+.nav-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: block;
+  padding: 0.75rem 2.25rem;
+  line-height: 1.5rem;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .nav-link {
