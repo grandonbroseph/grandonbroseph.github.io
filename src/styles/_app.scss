@@ -1,8 +1,7 @@
-$color-one: #00ccff;
-$color-onedark: #003388;
-$color-two: #660099;
-$color-twodark: #330066;
+$color-one: #1FF1B2;
+$color-two: #09c;
 $silver: #cde;
+$gray: #999;
 $charcoal: #333;
 $font-display: 'Gilroy-ExtraBold', Inter, serif;
 $font-content: Inter, sans-serif;
@@ -51,6 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: -2;
 }
 
 .name {
@@ -112,12 +112,11 @@ body {
 }
 
 .button {
+  border: 2px solid white;
+  padding: 1rem 2rem;
   font-family: $font-content;
   font-size: 1rem;
-  letter-spacing: 0.125rem;
-  text-transform: uppercase;
-  padding: 1rem 2rem;
-  border: 2px solid white;
+  letter-spacing: 0.0625rem;
 }
 
 .socials {

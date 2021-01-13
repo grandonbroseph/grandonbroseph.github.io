@@ -4,7 +4,7 @@ export const riderly = {
   subtitle: 'Connecting Transit Riders',
   lifespan: ['Sep 2020-Dec 2020'],
   platform: 'mobile',
-  icons: ['firebase', 'figma', 'js', 'css', 'html', 'nodejs'],
+  icons: ['firebase', 'figma', 'html'],
   contents: [
     'A transit web app for the Metro Vancouver area that crowdsources real-time information related to COVID-19 via chat rooms and user reports.'
   ],
@@ -17,7 +17,7 @@ export const mineteria = {
   subtitle: 'Minecraft Social Network',
   lifespan: ['Nov 2019', 'May 2020'],
   platform: 'desktop',
-  icons: ['react', 'figma', 'html', 'css', 'js'],
+  icons: ['react', 'figma', 'html'],
   contents: [
     'An online marketplace for Mineteria, the world\'s most exciting Minecraft social network.'
   ],

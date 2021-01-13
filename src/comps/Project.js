@@ -24,22 +24,22 @@ export default function Project (project) {
   const imagesrc = project.images[imageidx]
   let lifestr = project.lifespan[0]
   if (project.lifespan[1]) {
-    lifestr += '-' + project.lifespan[1]
+    lifestr += ' - ' + project.lifespan[1]
   }
   return <div className={reverse ? 'project -reverse' : 'project'}>
+    <img src={imagesrc} className='project-image' />
     <div className='project-contents'>
-      <div className='project-headings'>
+      <div className='project-header'>
         <h3 className='project-title'>{project.title}</h3>
-        <span className='project-subtitle'>{project.subtitle}</span>
-        <span className='project-lifespan'>{lifestr}</span>
+        <div className='project-icons'>
+          {project.icons && project.icons.length
+            ? project.icons.map((iconId, i) =>
+                <img key={i} src={`assets/${icons[iconId]}`} className='project-icon' />
+              )
+            : null}
+        </div>
       </div>
-      <div className='project-icons'>
-        {project.icons && project.icons.length
-          ? project.icons.map((iconId, i) =>
-              <img key={i} src={`assets/${icons[iconId]}`} className='project-icon' />
-            )
-          : null}
-      </div>
+      <span className='project-lifespan'>{lifestr}</span>
       {project.contents.map((content, i) =>
         <p key={i} className='project-content'>{content}</p>
       )}
@@ -56,16 +56,9 @@ export default function Project (project) {
           rel='noreferrer'
           className='project-button'>
             View the demo
-            <span className='project-button-icon material-icons-round'>arrow_right</span>
+            <span className='project-button-icon material-icons-round'>chevron_right</span>
           </a>
         : null}
-    </div>
-    <div className={
-      project.platform === 'mobile'
-        ? 'project-imagewrap -mobile'
-        : 'project-imagewrap -desktop'}>
-      <img src={imagesrc} className='project-image' />
-      <img src={imagesrc} className='project-image -refl' />
     </div>
   </div>
 }
