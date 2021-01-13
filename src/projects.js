@@ -60,7 +60,7 @@ export const tactics = {
   platform: 'desktop',
   icons: ['html', 'css', 'js'],
   contents: [
-    'A board game-style strategy game based around perfect information and deterministic combat.'
+    'A board game-style strategy game built around fixed unit interactions, perfect information, and deterministic combat.'
   ],
   link: {
     text: 'Play the demo',

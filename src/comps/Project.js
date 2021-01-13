@@ -11,7 +11,7 @@ Project.propTypes = {
   takeaways: type.arrayOf(type.string),
   icons: type.arrayOf(type.string),
   platform: type.string,
-  link: type.string,
+  link: type.objectOf(type.string),
   side: type.string
 }
 
@@ -58,7 +58,7 @@ export default function Project (project) {
         ? <a href={project.link.href}
           target='_blank'
           rel='noreferrer'
-          className='project-button'>
+          className='button'>
             {project.link.text}
             <span className='project-button-icon material-icons-round'>chevron_right</span>
           </a>

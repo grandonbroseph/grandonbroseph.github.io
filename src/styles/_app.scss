@@ -12,6 +12,10 @@ body {
   font-family: $font-content;
 }
 
+p {
+  letter-spacing: 0.05rem;
+}
+
 .page {
   position: relative;
   transition: 0.25s right;
@@ -41,7 +45,7 @@ body {
   opacity: 0.5;
 }
 
-.screen {
+.hero {
   background: linear-gradient(to top left, $color-one, $color-two);
   width: 100%;
   height: calc(100vh - 3rem);
@@ -51,6 +55,14 @@ body {
   align-items: center;
   text-align: center;
   z-index: -2;
+}
+
+.hero .button {
+  border: 2px solid white;
+  padding: 1rem 2rem;
+  font-family: $font-content;
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
 }
 
 .name {
@@ -80,9 +92,10 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 1.25rem;
+  padding: 1.25rem;
   z-index: 1;
   outline: 0;
+  background: black;
 }
 
 .nav {
@@ -111,14 +124,6 @@ body {
   border-bottom: thin solid $charcoal;
 }
 
-.button {
-  border: 2px solid white;
-  padding: 1rem 2rem;
-  font-family: $font-content;
-  font-size: 1rem;
-  letter-spacing: 0.0625rem;
-}
-
 .socials {
   background: black;
   display: none; // flex;
@@ -137,18 +142,95 @@ body {
   margin-top: 1.5rem;
 }
 
-@font-face {
-  font-family: 'Gilroy-Light';
-  font-style: normal;
-  font-weight: 300;
-  src: url('fonts/Gilroy-Light.woff2') format('woff2'),
-       url('fonts/Gilroy-Light.woff') format('woff');
+.picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1.5rem;
 }
 
-@font-face {
-  font-family: 'Gilroy-ExtraBold';
-  font-style: normal;
-  font-weight: 800;
-  src: url('fonts/Gilroy-ExtraBold.woff2') format('woff2'),
-       url('fonts/Gilroy-ExtraBold.woff') format('woff');
+.picture::before {
+  content: '';
+  display: block;
+  background: $color-one;
+  width: 100%;
+  height: 48px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.picture::after {
+  content: '';
+  display: block;
+  background: url(../assets/brandon.jpg);
+  background-size: cover;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px white,
+    0 0 0 6px $color-one;
+  z-index: 1;
+}
+
+.section {
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0 2rem;
+}
+
+.section-title {
+  font-family: $font-display;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  position: relative;
+  z-index: 1;
+  margin: 1rem;
+}
+
+.section-title::before {
+  content: '';
+  display: block;
+  width: calc(100% + 8px);
+  height: 8px;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1px;
+  background: $color-one;
+}
+
+.section.-about p {
+  text-indent: 1.25rem;
+}
+
+.section.-about .button {
+  margin-top: 2rem;
+}
+
+.section .button {
+  background: $color-one;
+  color: white;
+  box-shadow: 0 8px 16px rgba($color-one, 50%);
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.section p, .section .button {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.button .icon.-padded {
+  margin-left: 4px;
 }

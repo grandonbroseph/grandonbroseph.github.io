@@ -1,40 +1,10 @@
-.section {
-  background: white;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-.section-title {
-  font-family: $font-display;
-  text-transform: uppercase;
-  letter-spacing: 0.0625rem;
-  position: relative;
-  z-index: 1;
-  margin: 1rem;
-}
-
-.section-title::before {
-  content: '';
-  display: block;
-  width: calc(100% + 8px);
-  height: 8px;
-  position: absolute;
-  z-index: -1;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 1px;
-  background: $color-one;
-}
-
-.project {
-  padding: 1rem;
+.project-image, .project-header, .project-subtitle {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .project + .project {
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .project-header {
@@ -65,6 +35,7 @@
   display: block;
   margin-bottom: 1rem;
   color: $gray;
+  letter-spacing: 0.05rem;
 }
 
 .project-context {
@@ -76,18 +47,6 @@
 }
 
 .project-image {
-  width: 100%;
+  width: calc(100% - 2rem);
   border: thin solid $silver;
-}
-
-.project-button {
-  background: $color-one;
-  color: white;
-  box-shadow: 0 8px 16px rgba($color-one, 50%);
-  padding: 1rem 2rem;
-  display: flex;
-  font-weight: bold;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
 }

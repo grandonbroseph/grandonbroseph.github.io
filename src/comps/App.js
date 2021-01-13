@@ -35,7 +35,7 @@ export default function App () {
     </nav>
     <div className={menu ? 'page -slide' : 'page'}
          onClick={menu ? closeMenu : null}>
-      <div className='screen'>
+      <div className='hero'>
         <div className='headings'>
           <h1 className='name'>Brandon Semilla</h1>
           <h2 className='title'>Web Developer</h2>
@@ -47,6 +47,16 @@ export default function App () {
           <img className='social -linkedin' src='../assets/icon-linkedin.svg' />
         </div>
       </div>
+      <section className='section -about'>
+        <h3 className='section-title'>About</h3>
+        <div className='picture'></div>
+        <p>Hi, I'm Brandon! I'm a front-end web developer and designer. I'm passionate about UI/UX design and making applications simpler, more accessible, and more effective.</p>
+        <p>On the side, I enjoy experimenting with new tech and homebrewing build tools, libraries, and frameworks to optimize efficiency and scalability in my own code. I'm also a hobbyist game developer and digital artist.</p>
+        <button className='button'>
+          Download résumé
+          <span className='icon -padded material-icons-round'>download</span>
+        </button>
+      </section>
       <section className='section -projects'>
         <h3 className='section-title'>Projects</h3>
         <Project side='left' {...projects.lifeos} />
