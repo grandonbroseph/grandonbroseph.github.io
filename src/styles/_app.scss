@@ -1,5 +1,5 @@
 $color-one: #1FF1B2;
-$color-two: #39f;
+$color-two: #1851f1;
 $silver: #cde;
 $gray: #999;
 $charcoal: #333;
@@ -8,6 +8,7 @@ $font-content: Inter, sans-serif;
 $nav-width: 160px;
 
 body {
+  background: black;
   color: white;
   font-family: $font-content;
 }
@@ -50,7 +51,7 @@ a {
 }
 
 .hero {
-  background: linear-gradient(to top left, $color-one, #3cf, $color-two);
+  background: linear-gradient(to top left, $color-one, $color-two);
   width: 100%;
   height: calc(100vh - 3rem);
   padding: 0 8%;
@@ -73,14 +74,20 @@ a {
   font-size: 3rem;
   font-family: $font-content;
   font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
   line-height: 1;
+  margin-top: 2rem;
+}
+
+.name strong {
+  font-size: 3.5rem;
 }
 
 .title, .subtitle {
   font-size: 1.25rem;
   font-family: $font-content;
   font-weight: normal;
-  text-transform: uppercase;
   letter-spacing: 0.125rem;
   line-height: 1.375;
 }
@@ -90,7 +97,7 @@ a {
 }
 
 .subtitle {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .nav-toggle {
@@ -131,21 +138,24 @@ a {
 }
 
 .socials {
-  background: black;
-  display: none; // flex;
-  flex-direction: column;
-  position: absolute;
-  padding: 1rem;
-  top: 20vh;
-  right: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
 .social {
-  width: 2rem;
+  display: flex;
+  padding: 1rem;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.social-icon {
+  width: 1.5rem;
 }
 
 .social + .social {
-  margin-top: 1.5rem;
+  margin-left: 1rem;
 }
 
 .picture {
@@ -165,8 +175,6 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  box-shadow: 0 0 0 3px white,
-    0 0 0 6px $color-one;
 }
 
 .picture::after {

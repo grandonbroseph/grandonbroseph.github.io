@@ -6,7 +6,7 @@ export const lifeos = {
   platform: 'mobile',
   icons: ['mithril', 'chrome', 'spotify'],
   contents: [
-    'A Chrome extension with a Pomodoro timer and audio integrations like ambience, binaural beats, and Spotify to boost mindfulness and productivity.'
+    'A Chrome extension featuring a Pomodoro timer and audio support for ambience, binaural beats, and Spotify integration to boost mindfulness and productivity.'
   ],
   link: {
     text: 'View the source',
@@ -23,7 +23,7 @@ export const riderly = {
   platform: 'mobile',
   icons: ['firebase', 'nodejs', 'html'],
   contents: [
-    'A transit web app for the Metro Vancouver area that crowdsources real-time information related to COVID-19 via chat rooms and user reports.'
+    'A transit web app for the Metro Vancouver area. Crowdsources real-time information related to COVID-19 via chat rooms and user reports.'
   ],
   link: {
     text: 'View it live',
@@ -60,7 +60,7 @@ export const tactics = {
   platform: 'desktop',
   icons: ['html', 'css', 'js'],
   contents: [
-    'A board game-style strategy game built around fixed unit interactions, perfect information, and deterministic combat.'
+    'A tabletop-style strategy game built around fixed unit interactions, perfect information, and deterministic combat.'
   ],
   link: {
     text: 'Play the demo',

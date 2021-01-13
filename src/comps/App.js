@@ -23,13 +23,10 @@ export default function App () {
           <a className='nav-link'>Home</a>
         </li>
         <li className='nav-item'>
-          <a className='nav-link'>Projects</a>
-        </li>
-        <li className='nav-item'>
           <a className='nav-link'>About</a>
         </li>
         <li className='nav-item'>
-          <a className='nav-link'>Contact</a>
+          <a className='nav-link'>Projects</a>
         </li>
       </ul>
     </nav>
@@ -37,21 +34,28 @@ export default function App () {
          onClick={menu ? closeMenu : null}>
       <div className='hero'>
         <div className='headings'>
-          <h1 className='name'>Brandon Semilla</h1>
+          <h1 className='name'>Brandon <strong>Semilla</strong></h1>
           <h2 className='title'>Web Developer</h2>
           <h2 className='subtitle'>+ Game Designer</h2>
-          <button className='button'>View projects</button>
-        </div>
-        <div className='socials'>
-          <img className='social -github' src='../assets/icon-github.svg' />
-          <img className='social -linkedin' src='../assets/icon-linkedin.svg' />
+          <div className='socials'>
+            <div className='social'>
+              <img className='social-icon -github' src='../assets/icon-github.svg' />
+            </div>
+            <div className='social'>
+              <img className='social-icon -linkedin' src='../assets/icon-linkedin.svg' />
+            </div>
+            <div className='social'>
+              <span className='social-icon material-icons-round'>mail</span>
+            </div>
+          </div>
+          {/* <button className='button'>View projects</button> */}
         </div>
       </div>
       <section className='section -about'>
         <h3 className='section-title'>About</h3>
         <div className='picture'></div>
-        <p>Hi, I&apos;m Brandon! I&apos;m a front-end web developer and designer. I&apos;m passionate about UI/UX design and making applications simpler, more accessible, and more effective to the people who need them most.</p>
-        <p>Currently, I&apos;m a second-term Computer Systems Technology (CST) student at BCIT in search of an entry-level co-op position. Need someone to build and maintain a website for the 21st century? Let&apos;s get in touch!</p>
+        <p>Hi, I&apos;m Brandon! I&apos;m a front-end web developer and designer. I&apos;m passionate about UI/UX and making applications simpler, more accessible, and more effective for the people who need them most.</p>
+        <p>Currently, I&apos;m a second-term Computer Systems Technology (CST) student at BCIT in search of an entry-level co-op position. Need someone to build a website for the 21st century? Let&apos;s get in touch!</p>
         <button className='button'>
           Download résumé
           <span className='icon -padded material-icons-round'>download</span>
