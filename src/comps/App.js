@@ -47,13 +47,14 @@ export default function App () {
           <img className='social -linkedin' src='../assets/icon-linkedin.svg' />
         </div>
       </div>
-      <div className='projects'>
+      <section className='section -projects'>
+        <h3 className='section-title'>Projects</h3>
         <Project side='left' {...projects.lifeos} />
         <Project side='right' {...projects.riderly} />
         <Project side='left' {...projects.mineteria} />
         <Project side='right' {...projects.tactics} />
         <Project side='left' {...projects.proto} />
-      </div>
+      </section>
     </div>
   </main>
 }

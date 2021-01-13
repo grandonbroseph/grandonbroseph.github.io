@@ -34,7 +34,7 @@ export const mineteria = {
   platform: 'desktop',
   icons: ['react', 'figma', 'html'],
   contents: [
-    'An online marketplace for Mineteria, the world\'s most exciting Minecraft social network.'
+    'The online marketplace for Mineteria, the world\'s most exciting Minecraft social network.'
   ],
   takeaways: [
     'Developed front end single-page application in React',
@@ -58,7 +58,7 @@ export const tactics = {
 }
 
 export const proto = {
-  images: ['assets/proto-00.png', 'assets/proto-02.png', 'assets/proto-03.png'],
+  images: ['assets/proto-02.png', 'assets/proto-00.png', 'assets/proto-03.png'],
   title: 'Proto Man',
   subtitle: 'A day in the limelight',
   lifespan: ['2014'],

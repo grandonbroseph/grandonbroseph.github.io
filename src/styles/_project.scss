@@ -1,6 +1,32 @@
-.projects {
+.section {
   background: white;
   color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.section-title {
+  font-family: $font-display;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  position: relative;
+  z-index: 1;
+  margin: 1rem;
+}
+
+.section-title::before {
+  content: '';
+  display: block;
+  width: calc(100% + 8px);
+  height: 8px;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1px;
+  background: $color-one;
 }
 
 .project {
