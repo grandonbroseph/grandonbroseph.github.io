@@ -6,6 +6,7 @@ $charcoal: #333;
 $font-display: 'Work Sans', Inter, serif;
 $font-content: Inter, sans-serif;
 $nav-width: 160px;
+$break-1: 580px;
 
 body {
   background: black;
@@ -132,7 +133,8 @@ a {
   font-weight: 500;
   text-transform: uppercase;
   display: block;
-  padding: 0.75rem 2.25rem;
+  padding: 0.75rem 0;
+  padding-right: 3rem;
   line-height: 1.5rem;
 }
 
@@ -256,11 +258,6 @@ a {
   margin: 1rem 0;
 }
 
-.section p, .section .button {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .button .icon.-padded {
   margin-left: 4px;
 }
@@ -273,4 +270,9 @@ a {
   text-align: center;
   background: black;
   padding: 1rem 0;
+}
+
+.section.-about p, .project {
+  margin-left: 8%;
+  margin-right: 8%;
 }

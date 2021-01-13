@@ -70,7 +70,7 @@ export default function App () {
       <section className='section -about'>
         <h3 className='section-title'>About</h3>
         <div className='picture'></div>
-        <p>Hi, I&apos;m Brandon! I&apos;m a front-end web developer and designer. I excel in using web frameworks like React and Vue with HTML and CSS to create beautiful and highly interactive modern frontends for any device.</p>
+        <p>Hi, I&apos;m Brandon! I&apos;m a front-end web developer and designer. I excel in using modern web frameworks like React and Vue with HTML and CSS to create beautiful and highly interactive user interfaces for any device.</p>
         <p>Currently, I&apos;m a second-term Computer Systems Technology (CST) student at BCIT in search of an entry-level co-op position. Need someone to build a website for the 21st century? Let&apos;s get in touch!</p>
         <button className='button'>
           Download résumé
