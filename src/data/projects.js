@@ -23,7 +23,7 @@ export const riderly = {
   platform: 'mobile',
   icons: ['firebase', 'nodejs', 'html'],
   contents: [
-    'A transit web app for the Metro Vancouver area. Crowdsources real-time information related to COVID-19 via chat rooms and user reports.'
+    'A transit web app for the Metro Vancouver area. Crowdsources real-time transit information (RTTI) related to COVID-19 via chat rooms and user reports.'
   ],
   link: {
     text: 'View it live',

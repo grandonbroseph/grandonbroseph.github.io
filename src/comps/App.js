@@ -79,11 +79,13 @@ export default function App () {
       </section>
       <section className='section -projects'>
         <h3 className='section-title'>Projects</h3>
-        <Project side='left' {...projects.lifeos} />
-        <Project side='right' {...projects.riderly} />
-        <Project side='left' {...projects.mineteria} />
-        <Project side='right' {...projects.tactics} />
-        <Project side='left' {...projects.proto} />
+        <div className='projects'>
+          <Project side='left' {...projects.lifeos} />
+          <Project side='right' {...projects.riderly} />
+          <Project side='left' {...projects.mineteria} />
+          <Project side='right' {...projects.tactics} />
+          <Project side='left' {...projects.proto} />
+        </div>
         <em className='section-addendum'>
           Find more projects on <a
              href='https://github.com/semibran'
