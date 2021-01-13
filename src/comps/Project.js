@@ -23,7 +23,7 @@ export default function Project (project) {
   const imageidx = 0
   const imagesrc = project.images[imageidx]
   let lifestr = project.lifespan[0]
-  if (project.lifespan[1]) {
+  if (project.lifespan[0] && project.lifespan[1]) {
     lifestr += ' - ' + project.lifespan[1]
   }
   return <div className={reverse ? 'project -reverse' : 'project'}>
@@ -39,7 +39,11 @@ export default function Project (project) {
             : null}
         </div>
       </div>
-      <span className='project-lifespan'>{lifestr}</span>
+      {project.context
+        ? lifestr
+            ? <span className='project-subtitle'><strong>{project.context}</strong> · {lifestr}</span>
+            : <span className='project-subtitle'><strong>{project.context}</strong></span>
+        : <span className='project-subtitle'>{lifestr}</span>}
       {project.contents.map((content, i) =>
         <p key={i} className='project-content'>{content}</p>
       )}

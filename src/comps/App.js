@@ -48,6 +48,7 @@ export default function App () {
         </div>
       </div>
       <div className='projects'>
+        <Project side='left' {...projects.lifeos} />
         <Project side='right' {...projects.riderly} />
         <Project side='left' {...projects.mineteria} />
         <Project side='right' {...projects.tactics} />

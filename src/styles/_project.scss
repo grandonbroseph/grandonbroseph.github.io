@@ -35,10 +35,14 @@
   height: 2rem;
 }
 
-.project-lifespan {
+.project-subtitle {
   display: block;
-  color: $gray;
   margin-bottom: 1rem;
+  color: $gray;
+}
+
+.project-context {
+  font-weight: bold;
 }
 
 .project-thumb {
@@ -47,6 +51,7 @@
 
 .project-image {
   width: 100%;
+  border: thin solid $silver;
 }
 
 .project-button {
