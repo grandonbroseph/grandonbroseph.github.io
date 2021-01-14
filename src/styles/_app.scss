@@ -24,6 +24,10 @@ a {
   color: $color-one;
 }
 
+body.-noclick {
+  pointer-events: none;
+}
+
 .page {
   position: relative;
   transition: 0.25s right;
@@ -117,6 +121,7 @@ a {
   outline: 0;
   background: transparent;
   transition: 0.25s background;
+  pointer-events: auto;
 }
 
 .nav-toggle.-filled {
@@ -133,6 +138,7 @@ a {
   text-align: right;
   background: black;
   z-index: -2;
+  pointer-events: auto;
 }
 
 .nav-title {
@@ -181,7 +187,7 @@ a {
   margin-left: 1rem;
 }
 
-.picture {
+.about-picture {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -189,7 +195,7 @@ a {
   margin-bottom: 1.5rem;
 }
 
-.picture::before {
+.about-picture::before {
   content: '';
   display: block;
   background: $color-one;
@@ -200,7 +206,7 @@ a {
   transform: translateY(-50%);
 }
 
-.picture::after {
+.about-picture::after {
   content: '';
   display: block;
   background: url(../assets/brandon.jpg);
@@ -249,7 +255,7 @@ a {
 }
 
 .section.-about .button {
-  margin-top: 2rem;
+  margin: 2rem auto 0;
 }
 
 .section .button {
@@ -267,6 +273,7 @@ a {
 
 .button .icon.-padded {
   margin-left: 4px;
+  margin-right: -8px;
 }
 
 .section-addendum {
@@ -280,6 +287,6 @@ a {
 }
 
 .section.-about p, .project {
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 6%;
+  margin-right: 6%;
 }
