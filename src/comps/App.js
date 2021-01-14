@@ -5,7 +5,7 @@ import icons from '../data/icons'
 import skills from '../data/skills'
 import * as projects from '../data/projects'
 
-const scrollDelay = 0
+const scrollDelay = 250
 const scrollDuration = 500
 
 export default function App () {
@@ -97,7 +97,7 @@ export default function App () {
         <div className='about'>
           <div className='about-picture'></div>
           <div className='about-content'>
-            <p>Hi, I&apos;m Brandon. I&apos;m a web developer and UI/UX designer. My primary expertise is in front-end development, particularly HTML/CSS/JS and using React to build small to medium-sized web apps. I also have plenty of experience developing custom libraries and build tools for the client-side in addition to using Node.js on the server side.</p>
+            <p>Hi, I&apos;m Brandon. I&apos;m a web developer and UI/UX designer. My primary expertise is in front-end development, particularly HTML/CSS/JS and using React to build small to medium-sized web apps. I also have plenty of experience developing custom libraries and build tools for the client-side in addition to using Node.js server-side to design microservices and REST APIs.</p>
             <p>Currently, I&apos;m a second-term Computer Systems Technology (CST) student at BCIT in search of an entry-level co-op position. Visit <a
               href='https://www.linkedin.com/in/brandon-semilla/'
               target='_blank'
