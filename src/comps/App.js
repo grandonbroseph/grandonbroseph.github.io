@@ -153,7 +153,7 @@ export default function App () {
             href='https://opensource.org/licenses/MIT'
             target='_blank'
             rel='noreferrer'
-            className='footer-notice'>MIT</a>
+            className='footer-notice'>MIT License</a>
         </span>
         <Socials />
       </footer>

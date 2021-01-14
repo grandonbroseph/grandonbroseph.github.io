@@ -1,6 +1,10 @@
 {
   "name": "semibran.github.io",
-  "private": "true",
+  "version": "0.0.0",
+  "description": "personal website",
+  "repository": "semibran/semibran.github.io",
+  "author": "semibran (Brandon Semilla)",
+  "license": "MIT",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^17.0.1",

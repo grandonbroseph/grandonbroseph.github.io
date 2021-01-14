@@ -1,5 +1,5 @@
 # semibran.github.io
-> Brandon Semilla's portfolio website
+> personal website
 
 ## development
 To get started, clone this repo and enter the following commands.
