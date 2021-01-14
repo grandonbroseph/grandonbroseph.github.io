@@ -21,7 +21,7 @@ export const riderly = {
   lifespan: ['2020'],
   context: 'BCIT',
   platform: 'mobile',
-  icons: ['firebase', 'nodejs', 'html'],
+  icons: ['firebase', 'figma', 'html'],
   contents: [
     'A transit web app for the Metro Vancouver area. Crowdsources real-time transit information (RTTI) related to COVID-19 via chat rooms and user reports.'
   ],
@@ -38,7 +38,7 @@ export const mineteria = {
   lifespan: ['2019', '2020'],
   context: 'Contract',
   platform: 'desktop',
-  icons: ['react', 'figma', 'html'],
+  icons: ['react', 'html', 'css'],
   contents: [
     'The online marketplace for Mineteria, the world\'s most exciting Minecraft social network.'
   ],
@@ -60,7 +60,7 @@ export const tactics = {
   platform: 'desktop',
   icons: ['html', 'css', 'js'],
   contents: [
-    'A tabletop-style, minimalistic strategy game built around fixed unit interactions, perfect information, and deterministic combat.'
+    'A tabletop-style strategy game built around fixed unit interactions, perfect information, and deterministic combat.'
   ],
   link: {
     text: 'Play the demo',
@@ -105,7 +105,7 @@ export const roguelike = {
   platform: 'desktop',
   icons: ['html', 'css', 'js'],
   contents: [
-    'A text-based roguelike dungeon generator with 3D perspective. Includes animations and FOV raycasting.'
+    'A basic procedural dungeon generator for a text-based adventure game. Includes 3D perspective, animations, and FOV raycasting.'
   ],
   link: {
     text: 'Play the demo',

@@ -10,7 +10,7 @@
 }
 
 .project-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .project-icons {
@@ -46,23 +46,8 @@
 }
 
 @media screen and (min-width: $break-1) {
-  .name strong {
-    font-size: 3rem;
-  }
-
-  .titles {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .title, .subtitle {
-    margin: 0;
-  }
-
-  .subtitle {
-    margin-left: 8px;
+  .hero {
+    padding: 0 15%;
   }
 
   .section-title {
@@ -70,8 +55,8 @@
   }
 
   .section.-about p, .project {
-    margin-left: 12.5%;
-    margin-right: 12.5%;
+    margin-left: 8%;
+    margin-right: 8%;
   }
 
   .section-addendum {
@@ -80,7 +65,7 @@
 
   .project {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .project-image {
@@ -107,12 +92,23 @@
 }
 
 @media screen and (min-width: $break-2) {
-  .hero {
+  .name strong {
+    font-size: 3rem;
+  }
+
+  .titles {
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    text-align: left;
-    padding: 0 12.5%;
+  }
+
+  .title, .subtitle {
+    margin: 0;
+  }
+
+  .subtitle {
+    margin-left: 8px;
   }
 
   .section-addendum {
@@ -126,6 +122,7 @@
     margin: 0 8%;
   }
 
+  // HACK: large space below
   .projects::after {
     content: '';
     display: block;
@@ -153,5 +150,28 @@
   .project-contents {
     margin-left: 0;
     margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: $break-3) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 0 8%;
+  }
+
+  .name, .socials {
+    margin-top: 0;
+  }
+
+  .titles {
+    justify-content: flex-start;
+  }
+
+  .projects {
+    column-count: 3;
+    margin: 0 2rem;
   }
 }
