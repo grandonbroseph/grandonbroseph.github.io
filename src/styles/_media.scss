@@ -243,7 +243,7 @@ $break-3: 1000px;
     align-items: center;
     text-align: left;
     width: 90%;
-    max-width: 800px;
+    max-width: 720px;
     margin: auto;
   }
 
@@ -265,7 +265,7 @@ $break-3: 1000px;
     display: flex;
     align-items: flex-start;
     width: 90%;
-    max-width: 800px;
+    max-width: 720px;
     margin: auto;
   }
 
@@ -291,6 +291,10 @@ $break-3: 1000px;
   .about-content {
     margin-left: 2rem;
   }
+
+  // .skills {
+  //   display: block;
+  // }
 
   .projects {
     column-count: 3;

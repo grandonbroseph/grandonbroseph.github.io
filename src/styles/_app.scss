@@ -316,6 +316,53 @@ body.-noclick {
   margin-right: -8px;
 }
 
+.skills {
+  display: none;
+  margin-left: 2rem;
+}
+
+.skills img {
+  width: 2rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+}
+
+.skill + .skill {
+  margin-top: 0.5rem;
+}
+
+.skill-bar {
+  width: 168px;
+  height: 8px;
+  margin-left: 1rem;
+  background: $silver;
+  position: relative;
+}
+
+.skill-bar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to left, $color-one, $color-two);
+}
+
+.skill-bar.-good::before {
+  width: 75%;
+}
+
+.skill-bar.-great::before {
+  width: 87.5%;
+}
+
+.skill-bar.-excellent::before {
+  width: 100%;
+}
+
 .project-notice {
   color: $gray;
 }

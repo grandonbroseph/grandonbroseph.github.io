@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react'
 import { Link } from 'react-scroll'
 import Project from './Project'
+import icons from '../data/icons'
+import skills from '../data/skills'
 import * as projects from '../data/projects'
 
 const scrollDelay = 0
@@ -95,12 +97,29 @@ export default function App () {
         <div className='about'>
           <div className='about-picture'></div>
           <div className='about-content'>
-            <p>Hi, I&apos;m Brandon! I&apos;m a front-end web developer and UI/UX designer. I specialize in using modern web frameworks including React and Vue with HTML/CSS/JS to create highly interactive user interfaces for any device.</p>
-            <p>Currently, I&apos;m a second-term Computer Systems Technology (CST) student at BCIT in search of an entry-level co-op position. Need a beautiful and responsive website built for the 21st century? Let&apos;s get in touch!</p>
-            <button className='button' title='Currently unavailable' disabled>
+            <p>Hi, I&apos;m Brandon. I&apos;m a web developer and UI/UX designer. My primary expertise is in front-end development, particularly HTML/CSS/JS and using React to build small to medium-sized web apps. I also have plenty of experience developing custom libraries and build tools for the client-side in addition to using Node.js on the server side.</p>
+            <p>Currently, I&apos;m a second-term Computer Systems Technology (CST) student at BCIT in search of an entry-level co-op position. Visit <a
+              href='https://www.linkedin.com/in/brandon-semilla/'
+              target='_blank'
+              rel='noreferrer'>
+                my LinkedIn
+              </a> for more info or just <a
+              href='mailto:semibran+gh@gmail.com'
+              target='_blank'
+              rel='noreferrer'>contact me.</a>
+            </p>
+            {/* <button className='button' title='Currently unavailable' disabled>
               Download résumé
               <span className='icon -padded material-icons-round'>download</span>
-            </button>
+            </button> */}
+          </div>
+          <div className='skills'>
+            {skills.map(([skill, value], i) =>
+              <div key={i} className='skill'>
+                <img src={'../assets/' + icons[skill]} />
+                <div className={'skill-bar -' + value}></div>
+              </div>
+            )}
           </div>
         </div>
       </section>
