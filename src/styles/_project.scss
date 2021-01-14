@@ -177,6 +177,7 @@
 
   .about {
     display: flex;
+    align-items: flex-start;
     max-width: 800px;
     margin: auto;
   }
@@ -186,7 +187,18 @@
   }
 
   .about-picture::before {
-    display: none;
+    background: linear-gradient(to top left, $color-one, $color-two);
+    width: calc(8rem + 12px);
+    height: calc(8rem + 12px);
+    left: -3px;
+    top: -3px;
+    transform: none;
+    border-radius: 50%;
+  }
+
+  .about-picture::after {
+    box-shadow: none;
+    border: 3px solid white;
   }
 
   .about-content {

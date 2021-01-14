@@ -41,7 +41,7 @@ export default function App () {
       <ul className='nav-list'>
         <li className='nav-item'>
           <Link className='nav-link'
-                activeClass='active'
+                activeClass='-active'
                 to='hero'
                 spy={true}
                 smooth={true}
@@ -52,7 +52,7 @@ export default function App () {
         </li>
         <li className='nav-item'>
           <Link className='nav-link'
-                activeClass='active'
+                activeClass='-active'
                 to='about'
                 spy={true}
                 smooth={true}
@@ -63,7 +63,7 @@ export default function App () {
         </li>
         <li className='nav-item'>
           <Link className='nav-link'
-                activeClass='active'
+                activeClass='-active'
                 to='projects'
                 spy={true}
                 smooth={true}
