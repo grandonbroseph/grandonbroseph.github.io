@@ -1,5 +1,5 @@
 export const lifeos = {
-  images: ['assets/lifeos-00.png'],
+  images: ['assets/lifeos.png'],
   title: 'LifeOS',
   lifespan: ['2021'],
   context: 'nwHacks',
@@ -15,7 +15,7 @@ export const lifeos = {
 }
 
 export const riderly = {
-  images: ['assets/riderly-01.png', 'assets/riderly-02.png', 'assets/riderly-00.png'],
+  images: ['assets/riderly.png'],
   title: 'Riderly',
   subtitle: 'Connecting Transit Riders',
   lifespan: ['2020'],
@@ -32,7 +32,7 @@ export const riderly = {
 }
 
 export const mineteria = {
-  images: ['assets/mineteria-00.png', 'assets/mineteria-01.png', 'assets/mineteria-02.png'],
+  images: ['assets/mineteria.png'],
   title: 'Mineteria',
   subtitle: 'Minecraft Social Network',
   lifespan: ['2019', '2020'],
@@ -53,7 +53,7 @@ export const mineteria = {
 }
 
 export const tactics = {
-  images: ['assets/tactics-00.png', 'assets/tactics-01.png', 'assets/tactics-02.png'],
+  images: ['assets/tactics.png'],
   title: 'Taciturn',
   subtitle: 'Tactical RPG Action',
   lifespan: ['2018', '2020'],
@@ -114,7 +114,7 @@ export const roguelike = {
 }
 
 export const proto = {
-  images: ['assets/proto-02.png', 'assets/proto-00.png', 'assets/proto-03.png'],
+  images: ['assets/proto.png'],
   title: 'Proto Man',
   subtitle: 'A day in the limelight',
   lifespan: ['2014'],
