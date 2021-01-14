@@ -68,11 +68,13 @@ $break-3: 1000px;
   }
 
   .project-notice {
-    border: thin solid $gray;
-    margin: 2rem 8% 0;
-    text-align: center;
-    padding: 3rem;
+    color: $gray;
+    border: thin solid $silver;
     border-radius: 8px;
+    margin: 2rem 8% 0;
+    padding: 3rem;
+    text-align: center;
+    line-height: 1.5;
   }
 
   .project-notice-icon {
@@ -305,9 +307,6 @@ $break-3: 1000px;
   }
 
   .project-notice {
-    color: $gray;
-    border: thin solid $gray;
-    border-radius: 8px;
     margin: 0;
     padding: 3rem 1.25rem;
     text-align: center;
@@ -317,7 +316,7 @@ $break-3: 1000px;
   .project-notice-icon {
     width: 3rem;
     height: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .footer {

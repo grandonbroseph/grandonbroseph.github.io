@@ -11,7 +11,7 @@ $nav-width: 160px;
 @keyframes appear {
   from {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(64px);
   }
 
   to {
@@ -400,7 +400,12 @@ body.-noclick {
 }
 
 .project-notice {
+  margin-top: 1rem;
   color: $gray;
+}
+
+.project-notice-icon {
+  display: none;
 }
 
 .footer {
