@@ -14,6 +14,7 @@ export default function App () {
   const heroRef = useRef(null)
   const aboutRef = useRef(null)
   const projectsRef = useRef(null)
+  const arrowRef = useRef(null)
 
   function closeMenu () {
     setMenu(false)
@@ -27,10 +28,17 @@ export default function App () {
 
   window.addEventListener('scroll', () => {
     const headerHeight = 64
+
     if (window.scrollY >= heroRef.current.clientHeight - headerHeight) {
       setScrolled(true)
     } else {
       setScrolled(false)
+    }
+
+    if (!window.scrollY) {
+      arrowRef.current.classList.remove('-hidden')
+    } else {
+      arrowRef.current.classList.add('-hidden')
     }
   })
 
@@ -90,6 +98,10 @@ export default function App () {
             </div>
           </div>
           <Socials />
+        </div>
+        <div className='hero-footer'>
+          <span className='hero-arrow icon material-icons-round'
+                ref={arrowRef}>expand_more</span>
         </div>
       </div>
       <section className='section -about' id='about' ref={aboutRef}>

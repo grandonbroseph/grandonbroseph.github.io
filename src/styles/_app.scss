@@ -10,14 +10,40 @@ $nav-width: 160px;
 
 @keyframes appear {
   from {
-    opacity: 0;
     transform: translateY(64px);
   }
 
   to {
-    opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0.5rem);
+  }
+
+  50% {
+    transform: translateY(-0.5rem);
+  }
+
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 html {
@@ -76,12 +102,13 @@ body.-noclick {
 .hero {
   background: linear-gradient(to top left, $color-one, $color-two);
   width: 100%;
-  height: 100vh; // 540px;
+  height: 100vh;
   padding: 0 8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  position: relative;
   z-index: -2;
 }
 
@@ -112,7 +139,8 @@ body.-noclick {
   display: flex;
   flex-direction: column;
   opacity: 0;
-  animation: 1s appear forwards 0.25s;
+  animation: 1s appear forwards 0.25s,
+    1s fadein forwards 0.25s;
 }
 
 .title, .subtitle {
@@ -129,6 +157,26 @@ body.-noclick {
 
 .subtitle {
   margin-bottom: 1rem;
+}
+
+.hero-footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.hero-arrow {
+  margin-bottom: 32px;
+  opacity: 0;
+  transition: 0.5s opacity;
+  animation: 1s bounce infinite cubic-bezier(0.37, 0, 0.63, 1) 1s,
+    0.25s fadein forwards 2s;
+}
+
+.hero-arrow.-hidden {
+  animation: none;
+  opacity: 0;
 }
 
 .nav-toggle {
@@ -229,7 +277,8 @@ body.-noclick {
   border-radius: 50%;
   opacity: 0;
   transition: 0.25s opacity;
-  animation: 1s appear forwards;
+  animation: 1s appear forwards,
+    1s fadein forwards;
 }
 
 .hero .social:hover {
