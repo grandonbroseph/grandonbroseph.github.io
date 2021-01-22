@@ -9,8 +9,8 @@ export const lifeos = {
     'A Chrome extension featuring a Pomodoro timer and audio support for ambience, binaural beats, and Spotify integration to boost mindfulness and productivity.'
   ],
   link: {
-    text: 'View the source',
-    href: 'https://github.com/semibran/lifeos'
+    text: 'View the Devpost',
+    href: 'https://devpost.com/software/lifeos'
   }
 }
 
