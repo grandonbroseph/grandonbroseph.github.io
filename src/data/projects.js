@@ -4,7 +4,7 @@ export const covid19 = {
   lifespan: ['2021'],
   context: 'Hack the North',
   platform: 'mobile',
-  icons: ['react', 'chrome', 'spotify'],
+  icons: ['react', 'nodejs', 'threejs'],
   contents: [
     'A web app for visualizing the spread of COVID-19 across the globe.'
   ],
@@ -100,6 +100,21 @@ export const tetris = {
   }
 }
 
+export const life = {
+  images: ['assets/life.png'],
+  title: 'Game of Life',
+  lifespan: ['2017'],
+  platform: 'mobile',
+  icons: ['html', 'css', 'js'],
+  contents: [
+    'A lightweight and heavily optimized implementation of Conway\'s Game of Life.'
+  ],
+  link: {
+    text: 'View the source',
+    href: 'https://github.com/semibran/life'
+  }
+}
+
 export const connectFour = {
   images: ['assets/connect-four.png'],
   title: 'Connect Four',
@@ -110,7 +125,7 @@ export const connectFour = {
     'A Connect Four game with a CPU opponent as well as local and online multiplayer.'
   ],
   link: {
-    text: 'View the demo',
+    text: 'Play the demo',
     href: 'https://semibran.github.io/connect-four'
   }
 }
@@ -126,7 +141,7 @@ export const roguelike = {
   ],
   link: {
     text: 'Play the demo',
-    href: 'https://codepen.io/semibran/full/yyGMOp'
+    href: 'https://semibran.github.io/dungeon-2.5d'
   }
 }
 
@@ -152,6 +167,7 @@ export const sequence = [
   riderly,
   mineteria,
   tactics,
+  life,
   connectFour,
   roguelike,
   proto

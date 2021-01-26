@@ -16,6 +16,7 @@ export default {
   socketio: 'icon-socketio.svg',
   soundcloud: 'icon-soundcloud.svg',
   spotify: 'icon-spotify.svg',
+  threejs: 'icon-threejs.png',
   twitter: 'icon-twitter.svg',
   vue: 'icon-vue.svg'
 }
