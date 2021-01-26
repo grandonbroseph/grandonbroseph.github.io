@@ -1,3 +1,20 @@
+export const covid19 = {
+  images: ['assets/covid19.png'],
+  title: 'COVID-19 Worldwide',
+  lifespan: ['2021'],
+  context: 'Hack the North',
+  platform: 'mobile',
+  icons: ['react', 'chrome', 'spotify'],
+  contents: [
+    'A web app for visualizing the spread of COVID-19 across the globe.'
+  ],
+  link: {
+    text: 'View the Devpost',
+    href: 'https://devpost.com/software/covid19-globe'
+  }
+
+}
+
 export const lifeos = {
   images: ['assets/lifeos.png'],
   title: 'LifeOS',
@@ -63,8 +80,8 @@ export const tactics = {
     'A tabletop-style strategy game built around fixed unit interactions, perfect information, and deterministic combat.'
   ],
   link: {
-    text: 'Play the demo',
-    href: 'https://semibran.github.io/tactics-new'
+    text: 'View the source',
+    href: 'https://github.com/semibran/tactics-new'
   }
 }
 
@@ -130,6 +147,7 @@ export const proto = {
 }
 
 export const sequence = [
+  covid19,
   lifeos,
   riderly,
   mineteria,
