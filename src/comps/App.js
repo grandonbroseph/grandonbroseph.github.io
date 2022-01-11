@@ -109,16 +109,16 @@ export default function App () {
         <div className='about'>
           <div className='about-picture'></div>
           <div className='about-content'>
-            <p>Hi, I&apos;m Brandon. I&apos;m a web developer and UI/UX designer. My primary expertise is in front-end development, particularly HTML/CSS/JS and using React to build small to medium-sized web apps. I also have plenty of experience developing custom libraries and build tools for the client-side in addition to using Node.js server-side to design microservices and REST APIs.</p>
-            <p>Currently, I&apos;m a second-term Computer Systems Technology (CST) student at BCIT in search of an entry-level co-op position. Visit <a
+            <p>Hi, I&apos;m Brandon. I&apos;m a web developer and UI/UX designer. My primary expertise is in front-end development and design, particularly HTML/CSS/JS and using frameworks like React to build web apps. I also do backend work, tooling, testing, DevOps, mobile, and small-scale game development.</p>
+            <p>I have a bunch of past projects you can check out below. If you want to get in touch, feel free to shoot me a message on <a
               href='https://www.linkedin.com/in/brandon-semilla/'
               target='_blank'
               rel='noreferrer'>
-                my LinkedIn
-              </a> for more info or just <a
+                LinkedIn
+              </a> or just <a
               href='mailto:semibran+gh@gmail.com'
               target='_blank'
-              rel='noreferrer'>contact me.</a>
+              rel='noreferrer'>email me</a>.
             </p>
             {/* <button className='button' title='Currently unavailable' disabled>
               Download résumé
